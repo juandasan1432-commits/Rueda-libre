@@ -7,9 +7,13 @@ Registro de peticion HTTP
 . Metodo de peticion: get 
 . codigo de estado: 304 (no se encontraron cambios con la version guardada en el cache)
 
-. Rutaincorrecta en la URL: Imprime error 500 internal server error ( significa que tuvo un error interno ya que no encontro la peticion (carrito.html))
+. Rutaincorrecta en la URL: Imprime error 500 internal server error ( significa que tuvo un error interno ya 
+que no encontro la peticion (carrito.html))
 
 error: ENOTDIR:not a directory, stat '/home/cohorte8/Documents/rueda-libre/index.html/carrito.html'
 (significa que la ruta o el archivo no es un directorio"carpeta", o sea que no existe esa ruta)
 
-html = Tiene el rol de estructura, esta encargado de toda la parte que se va a mostrar ejemplo " 
+html = Tiene el rol de estructura, esta encargado de toda la parte que se va a mostrar ejemplo 
+css = Tiene el rol de estilos, esta encargado de los estilos, aparencia y estetica de la pagina 
+javaScript = Tiene el rol de funcionalidad, esta encargado de la experencia y de toda la parte interactiva de la pagina.
+
