@@ -1,0 +1,15 @@
+Registro de peticion HTTP   
+. URL: http://127.0.0.1:5500/index.html
+. Protocolo: scheme:HTTP
+. Host: 127.0.0.1:5500
+. Puerto: 5500
+. Ruta: /index.html
+. Metodo de peticion: get 
+. codigo de estado: 304 (no se encontraron cambios con la version guardada en el cache)
+
+. Rutaincorrecta en la URL: Imprime error 500 internal server error ( significa que tuvo un error interno ya que no encontro la peticion (carrito.html))
+
+error: ENOTDIR:not a directory, stat '/home/cohorte8/Documents/rueda-libre/index.html/carrito.html'
+(significa que la ruta o el archivo no es un directorio"carpeta", o sea que no existe esa ruta)
+
+html = Tiene el rol de estructura, esta encargado de toda la parte que se va a mostrar ejemplo " 
