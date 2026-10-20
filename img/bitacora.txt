@@ -17,3 +17,12 @@ html = Tiene el rol de estructura, esta encargado de toda la parte que se va a m
 css = Tiene el rol de estilos, esta encargado de los estilos, aparencia y estetica de la pagina 
 javaScript = Tiene el rol de funcionalidad, esta encargado de la experencia y de toda la parte interactiva de la pagina.
 
+
+Tabla de rutas(inicio --carpeta que sale-- destino --lugar que quiere llegar-- Ruta --href que se cola como url o ruta, para que el codigo "programa" reconozca donde debe buscar.)
+inicio          destino          Ruta
+index.html	    tarifas.html	 paginas/tarifas.html
+index.html	    reservas.html	 paginas/reservas.html
+tarifas.html	index.html	     ../index.html
+tarifas.html	reservas.html	 reservas.html
+reservas.html	index.html	     ../index.html
+reservas.html	tarifas.html	 tarifas.html
