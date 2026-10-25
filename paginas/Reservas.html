@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +8,117 @@
 </head>
 <body>
     <header>
-    <h1>Reserva tu Bicicleta</h1>
-    <nav>
+        <h1>Reserva tu Bicicleta</h1>
+        <nav aria-label="navegacion principal">
         <a href="../index.html">Inicio</a>
         <a href="Tarifas.html">Tarifas y Rutas</a>
         <a href="Reservas.html">Reservas</a> 
     </nav>
     </header>
 <main>
-<a href="mailto:hola@ruedalibre.example" target="_blank"  rel="noopener noreferrer"> Correo ..</a>
 
-<h2>Horarios</h2>
+<p> Escribenos para reservar :
+    <a href="mailto:hola@ruedalibre.example" target="_blank"  rel="noopener noreferrer"> hola@ruedalibre.example</a>
+</p>
+
+<section>
+    <h2> Formulario de reservas </h2>
+    <form method="post">
+        <fieldset>
+            <legend>Tus datos</legend>
+            <p>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </p>
+            <p> 
+                <label for="Documento">Numero Documento</label>
+                <input type="text" id="Documento" name="Numero Documento" pattern=[A-Za-z0-9][5-15] title="Escribe el documento sin puntos ni espacios (5 a 15 caracteres)">
+            </p>
+            <p>
+                <label for="Correo">Correo electronico</label>
+                <input type="email" id="Correo" name="Correo" required>
+            </p>
+            <p>
+                <label for="Celular">Numero Celular</label>
+                <input type="tel" id="Celular" name="Celular" required>
+            </p>
+    
+        </fieldset>
+
+        <fieldset>
+            <legend>Tu alquiler</legend>
+           <p>
+            <label for="Fecha">Fecha Alquiler</label>
+            <input type="date" id="Fecha" name="Fecha" required>
+            </p>
+            <fieldset>
+                <legend>Tipo de bicicleta</legend>
+                <p>
+                    <input type="radio" id="Montaña" name="Tipo_bicicleta" value="Bicleta Montaña" required>
+                    <label for="Montaña">Bicicleta de Montaña </label>
+                </p>
+                <p>
+                    <input type="radio" id="Urbana" name="Tipo_bicicleta" value="Bicicleta Urbana">
+                    <label for="Urbana"> Bicicleta Urbana</label>
+                </p>
+                <p> 
+                    <input type="radio" id="Electrica" name="Tipo_bicicleta" value="Bicicleta Electrica">
+                    <label for="Electrica"> Bicicleta Electrica</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Planes</legend>
+                <p>
+                    <input type="radio" id="1_hora" name="Tipo_plan" value="1 hora" required>
+                    <label for="1_hora"> 1 hora</label>
+                </p>
+                <p>
+                    <input type="radio" id="medio_dia" name="Tipo_plan" value="medio dia">
+                    <label for="medio_dia"> Medio Dia</label>
+                </p>
+                <p>
+                    <input type="radio" id="dia_completo" name="Tipo_plan" value="dia completa">
+                    <label for="dia_completo"> Dia completo</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Cantidad de bicicletas</legend>
+                <p>
+                    <label for="Cantidad_bicletas">Cantidad bicicletas</label>
+                    <input type="number" id="Cantidad_bicicletas" name="Cantidad_bicicletas" min="1" value="1" required>
+                </p>
+                <p>
+                    <label for="Recorrido guiados"> Recorridos Guiados</label>
+                    <select name="Recorrido guiados" id="Recorridos guiados">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="Rio_parques"> Rio y Parques</option>
+                        <option value="Sabores_barrio"> Sabores del Barrio</option>
+                        <option value="Reto_palmas"> Reto de las Palmas</option>
+                    </select>
+                </p>
+            </fieldset>
+        </fieldset>
+
+        <fieldset>
+            <legend>Confirmacion</legend>
+            <p>
+            <label for="Comentarios">Comentarios de reserva</label>
+            <textarea name="Comentarios_reserva" id="Comentarios" rows="4"> Comentarios de reserva:</textarea>
+            </p>
+            <p>
+                <input type="checkbox" id="Derechos_alquiler" name="Derechos_alquiler" value="Acuerdo_Derechos_alquiler" required>
+                <label for="Derechos_alquiler">acepto derechos de alquiler</label>
+            </p>
+        </fieldset>
+
+        <button type="submit">Enviar Formulario</button>
+    </form>
+
+
+</section>
+<aside aria-labelledby="Horarios">
+<h2 id="titulo_horarios">Horarios</h2>
 <dl>
     <dt>lunes</dt>
     <dd>7:00 am - 7:00 pm</dd>
@@ -37,7 +137,16 @@
     <dt>Festivos</dt>
     <dd>6:00 am - 2:00 pm</dd>
 </dl>
+</aside>
+
 </main>
-    
+
+   <footer>
+    <p>
+        correo:
+        <a href="maillto:mailto:hola@ruedalibre.example" target="_blank" rel="no" ></a>
+        <small>&copy; 2026 rueda libre. derechos de autor reservados</small>
+    </p>
+   </footer> 
 </body>
 </html>

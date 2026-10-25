@@ -26,3 +26,49 @@ tarifas.html	index.html	     ../index.html
 tarifas.html	reservas.html	 reservas.html
 reservas.html	index.html	     ../index.html
 reservas.html	tarifas.html	 tarifas.html
+
+
+regiones de la pagina
+index.html
+header
+  ├── h1: Rueda Libre
+  └── nav (navegación principal): Inicio · Tarifas y Rutas · Reservas
+main
+  ├── p de bienvenida + imagen de portada
+  ├── section: ¿Quiénes somos?
+  ├── section: Nuestros servicios
+  │     ├── article: Alquiler de bicicletas
+  │     ├── article: Recorridos guiados
+  │     └── article: Taller básico
+  ├── section: ¿Cómo alquilar?  (pasos + beneficios + enlace a reservas)
+  └── section: Encuéntranos     (mapa + correo)
+footer: nombre, correo, copyright
+
+tarifas.html
+header (h1 Tarifas + nav)
+main
+  ├── imagen
+  ├── section: tabla de alquiler de bicicletas
+  ├── section: tabla de recorridos guiados
+  ├── enlace "Reserva ahora" + nota de lo que incluyen las tarifas
+  └── aside: Qué llevar
+footer
+
+reservas.html
+header (h1 Reserva tu Bicicleta + nav)
+main
+  ├── p con el correo para reservar
+  └── aside: Horarios de atención
+footer
+
+formulario de reserva.
+
+Documento = text con pattern. Fue seleccionado ya que se requiere numeros y en algunos casos de extranjeros tambien letras; se usa el pattern para limitar y que no se pueda enviar cualquier cosa, solo letras minusculas,mayusculas y numeros. 
+
+Recorridos guiados = select. fue seleccionado porque muestra opciones de forma vertical en una misma linea, despliega opciones y subraya la que se selecciona.
+
+tipo de bicicletas = radio. fue seleccionado porque genera varias opciones con claridad en forma de marca, ejemplo, se crea un circulo y al lado su valor, se da click y el se rellena (se marca).
+
+
+
+

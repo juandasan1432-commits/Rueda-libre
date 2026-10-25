@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
     <link rel="icon" type="image/jpeg" href="../img/imagen_ruleta.jpeg">
 </head>
 <body>
+
     <header>
         <h1>Tarifas</h1>
         <nav>
@@ -16,11 +17,14 @@
         <a href="Reservas.html">Reservas</a> 
     </nav>
     </header>
+
     <main>
 
         <img src="../img/imagen_ruleta.jpeg" style="width: 450px; height: 400px;" alt="">
+        
+        <section aria-labelledby="tablaruedalibre">
         <table border="1">
-            <caption>Tabla Rueda libre</caption>
+            <caption id="tablaruedalibre">Tabla Rueda libre</caption>
             <thead>
                 <tr>
                     <th>Tipo de bicicleta</th>
@@ -54,14 +58,14 @@
 
             </tbody>
         </table>
+        </section>
 <br>
 <br>
-
             <section id="Section-recorridos">
             <table border="1">
-           <header>
 
-          <caption style="text-align: center;"> Recorridos guiados</caption>
+          <caption id="Section-recorridos" style="text-align: center;"> Recorridos guiados</caption>
+          <thead>
                 <tr>
                     <th scope="col" >Recorrido</th>
                     <th scope="col" >Distancia</th>
@@ -69,7 +73,7 @@
                     <th scope="col" >Nivel</th>
                     <th scope="col" >Precio por persona</th>
                 </tr>
-            </header>
+           </thead>
 
             <tbody>
                 <tr>
@@ -96,8 +100,8 @@
             </tbody>
             </table>
         </section>
-<br>
-        <a href="Reservas.html">Reserva ahora</a>
+
+       <p><a href="Reservas.html">Reserva ahora</a></p>
 
             <p>
             
@@ -105,9 +109,29 @@
                 a. m. Qué llevar: ropa cómoda, agua, protector solar y documento de identidad.</em></strong>
             </p>
 
-            
+            <aside aria-label="Que llevar"> 
+                <h2>¿Que llevar?</h2>
+                <ul>
+                    <li>Ropa comoda</li>
+                    <li>Termo con agua</li>
+                    <li>Protector solar</li>
+                    <li>Docuemnto de identidad</li>
+                </ul>
+            </aside>
 
     </main>
+
+    <footer>
+        <p>Rueda libre</p>
+
+        <p>
+            correo: 
+            <a href="mailto:hola@ruedalibre.example">Correo</a>
+            <p>&copy; 2026 rueda libre. derechos de autor reservados</p>
+            
+        </p>
+
+    </footer>
     
 </body>
 </html>
