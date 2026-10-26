@@ -85,3 +85,98 @@ N° | Campo              | Dato de prueba     | Resultado esperado              
 7  |Planes              |no seleccionar nada | Seleccionar cualquier opcion                  |Seleccionar alguna de las opciones para continuar
 8  |correo              |no colocar@         |Error, falta el signo @ en tu direccion        |incluye un signo @ en la direccion("correo copiado"). la direccion  
                                                                                               copiada (correo copiado) no tiene el @
+
+
+registro de hallazgos y correcion.
+
+hallazgo (index.html): 
+img despues del parrafo de bienvenida:
+imagen de bienvenida, en alt solo tenia imagen bicicleta; no tenia nada descriptivo ----> correcion: agregue al alt una descripcion corta de la imagen --> Grupo de seis ciclistas con bicicletas de montaña en la cima de un sendero, con montañas verdes al fondo".
+
+img despues del parrafo alquiler de bicicleta. (index.html)
+imagen de bicicletas no tenia nada en el alt ---> correcion : agregue informacion al alt. ---> Representacion de algunas bicicletas que se tienen disponibles.
+
+hallazgo (index.html):
+texto de enlaces en la section de encuentranos:
+enlace como encontrarnos google maps, no era claro solo tenia como descripcion google maps ---> correcion:agregar un poco mas de informacion ---> Como llegar a Rueda Libre con google maps.
+
+hallazgo (Tarifas.html):
+img de bienvenida que se encuentra debajo del main:
+imagen de bienvenida a tarifas, en alt no tenia nada --> correcion: agregue informacion al alt ---> indica que se encuentra en el apartado de tarifas, y da una breve representacion de las bicicletas
+
+hallazgo (reservas.html):
+<html lang="en"> :
+lang es el idioma de la pagina y en reservas el idioma esta en "en=english" ---> correcion: cambiarlo igual que las otras paginas para el español. ---> <html lang="es">
+
+sin hallazgos: se puede navegar con total normalidad y logica sin usar el mouse.
+
+
+CONTRASTE DE LA PALETA
+
+N° | Texto          | Fondo          | Relación | Clasificación
+---|----------------|----------------|----------|------------------------------
+1  | Blanco         | Verde Ruta     | 5.31 :1  |Apta para texto normal
+2  | Blanco         | Naranja Pedal  | 2.21 :1  |no apta
+3  | Azul Noche     | Naranja Pedal  | 7.2 :1   |apta para texto normal 
+4  | Azul Noche     | Crema          | 14.82 :1 |apta para texto normal 
+5  | Gris Asfalto   | Crema          | 5.56 :1  |apta para texto normal
+6  | Verde Ruta     | Crema          | 4.93 :1  |apta para texto normal 
+7  | Naranja Pedal  | Crema          | 2.05 :1  |no apta
+8  | Blanco         | Azul Noche     | 15.97 :1 |apta para texto normal
+
+
+MAPA DE USO DE COLOR
+
+Crema (#FAF6EF)
+- Fondo general de todas las páginas.
+- Sobre crema se puede escribir con: Azul Noche, Gris Asfalto y Verde Ruta.
+- Sobre crema NO se puede escribir con Naranja Pedal (2.05:1).
+
+Azul Noche (#14213D)
+- Texto: títulos (h1, h2, h3) y texto principal de párrafos, sobre crema (14.82:1).
+- Fondo: encabezado del sitio (header), con texto blanco (15.97:1).
+- Texto de los botones secundarios naranjas (7.2:1).
+
+Gris Asfalto (#5B6470)
+- Texto secundario sobre crema (5.56:1): notas, fechas, texto del footer,
+  aclaraciones como "Todas las tarifas incluyen casco y candado".
+- Solo se evaluó sobre crema; no usarlo sobre otros fondos sin revisar.
+
+Verde Ruta (#1E7A4F)
+- Enlaces sobre crema (4.93:1), siempre subrayados.
+- Fondo de los botones principales ("Enviar reserva", "Reservar ahora"),
+  con texto blanco (5.31:1).
+- Nota: 4.93:1 pasa por poco. Si se cambia el fondo por un tono más oscuro,
+  hay que volver a medir.
+
+Naranja Pedal (#F39A2B)
+- Fondo de botones secundarios y bloques destacados, SIEMPRE con texto
+  Azul Noche (7.2:1).
+- NO usar con texto blanco (2.21:1).
+- NO usar como color de texto sobre crema (2.05:1).
+- Como el naranja contrasta poco con el crema, el botón secundario lleva
+  un borde Azul Noche para que se distinga del fondo.
+- Se puede usar en adornos sin texto (líneas, detalles decorativos).
+
+Blanco (#FFFFFF)
+- Solo como color de texto sobre fondos oscuros: Verde Ruta (5.31:1) y
+  Azul Noche (15.97:1).
+
+Resumen por uso
+- Fondo general: Crema.
+- Texto principal y títulos: Azul Noche.
+- Texto secundario: Gris Asfalto.
+- Enlaces: Verde Ruta, subrayados.
+- Botón principal: fondo Verde Ruta con texto blanco.
+- Botón secundario y destacados: fondo Naranja Pedal con texto Azul Noche
+  y borde Azul Noche.
+- Encabezado del sitio: fondo Azul Noche con texto blanco.
+
+Cambios respecto a la propuesta del cliente
+- El cliente proponía Naranja Pedal para destacados y botones secundarios.
+  Se mantiene, pero solo con texto Azul Noche: con texto blanco o como
+  texto sobre crema no cumple el contraste mínimo.
+
+
+
+
