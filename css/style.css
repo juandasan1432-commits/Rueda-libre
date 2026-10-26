@@ -1,4 +1,34 @@
-:root:{
+:root{
     /*colores de la pagina*/
-    
+    --verde-ruta: #1e7a4f;
+    --gris-asfalto: #5B6470;
+    --azul-noche: #14213D;
+    --crema: #FAF6EF;
+
+    /*tipografia*/
+    --fuentes-titulos: Montserrat, arial, sans-serif;
+    --fuente-textos: "Open Sans", arial, sans-serif;
+
+    /*tamaños espaciados*/
+    --espacio-s: 0.5rem;
+    --espacio-m: 1rem;
+    --espacio-1: 2rem;
+}
+
+body{
+    font-family: var(--fuentes-titulos);
+    color: var(--azul-noche);
+    background-color: var(--crema)
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--fuentes-titulos);
+
+}
+img{
+    max-width: 30%;
+    height: auto;
+
+}
+caption{
+    text-align: center;
 }
