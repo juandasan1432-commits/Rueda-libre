@@ -28,11 +28,11 @@
             <legend>Tus datos</legend>
             <p>
                 <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombre" name="nombre" minlength="3" required>
             </p>
             <p> 
                 <label for="Documento">Numero Documento</label>
-                <input type="text" id="Documento" name="Numero Documento" pattern=[A-Za-z0-9][5-15] title="Escribe el documento sin puntos ni espacios (5 a 15 caracteres)">
+                <input type="text" id="Documento" name="Numero_Documento" inputmode="numeric" pattern="[0-9]{6,10}" title="Solo digitos, entre 6 y 10 caracteres" required>
             </p>
             <p>
                 <label for="Correo">Correo electronico</label>
@@ -40,8 +40,9 @@
             </p>
             <p>
                 <label for="Celular">Numero Celular</label>
-                <input type="tel" id="Celular" name="Celular" required>
+                <input type="tel" id="Celular" name="Celular" pattern="3[0-9]{9}"   title="Solo se admiten 10 numeros y debe comenzar con el 3"required>
             </p>
+
     
         </fieldset>
 
@@ -49,7 +50,7 @@
             <legend>Tu alquiler</legend>
            <p>
             <label for="Fecha">Fecha Alquiler</label>
-            <input type="date" id="Fecha" name="Fecha" required>
+            <input type="date" id="Fecha" name="Fecha" min="2026-11-01" max="2026-12-01" required>
             </p>
             <fieldset>
                 <legend>Tipo de bicicleta</legend>
@@ -86,7 +87,7 @@
                 <legend>Cantidad de bicicletas</legend>
                 <p>
                     <label for="Cantidad_bicletas">Cantidad bicicletas</label>
-                    <input type="number" id="Cantidad_bicicletas" name="Cantidad_bicicletas" min="1" value="1" required>
+                    <input type="number" id="Cantidad_bicicletas" name="Cantidad_bicicletas" min="1" max="6" value="1" required>
                 </p>
                 <p>
                     <label for="Recorrido guiados"> Recorridos Guiados</label>
@@ -104,19 +105,18 @@
             <legend>Confirmacion</legend>
             <p>
             <label for="Comentarios">Comentarios de reserva</label>
-            <textarea name="Comentarios_reserva" id="Comentarios" rows="4"> Comentarios de reserva:</textarea>
+            <textarea name="Comentarios_reserva" id="Comentarios" rows="4"  maxlength="300"> Comentarios de reserva:</textarea>
             </p>
             <p>
                 <input type="checkbox" id="Derechos_alquiler" name="Derechos_alquiler" value="Acuerdo_Derechos_alquiler" required>
-                <label for="Derechos_alquiler">acepto derechos de alquiler</label>
+                <label for="Derechos_alquiler">Acepta derechos de alquiler</label>
             </p>
         </fieldset>
 
         <button type="submit">Enviar Formulario</button>
     </form>
-
-
 </section>
+
 <aside aria-labelledby="Horarios">
 <h2 id="titulo_horarios">Horarios</h2>
 <dl>

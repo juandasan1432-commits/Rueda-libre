@@ -63,12 +63,25 @@ footer
 
 formulario de reserva.
 
-Documento = text con pattern. Fue seleccionado ya que se requiere numeros y en algunos casos de extranjeros tambien letras; se usa el pattern para limitar y que no se pueda enviar cualquier cosa, solo letras minusculas,mayusculas y numeros. 
+comentarios = textarea. fue seleccionado ya que nos permite una casilla mas grande para que el cliente o el usuario pueda escribir comentarios extensos.
 
 Recorridos guiados = select. fue seleccionado porque muestra opciones de forma vertical en una misma linea, despliega opciones y subraya la que se selecciona.
 
 tipo de bicicletas = radio. fue seleccionado porque genera varias opciones con claridad en forma de marca, ejemplo, se crea un circulo y al lado su valor, se da click y el se rellena (se marca).
 
 
+comprobacion de formulario.
 
+TABLA DE PRUEBAS
 
+N° | Campo              | Dato de prueba     | Resultado esperado                            | Resultado obtenido
+---|--------------------|--------------------|-----------------------------------------------|-------------------------------------
+1  |nombre              | jo                 | error, minimo 3 caracteres                    |Alarga el texto a 3 o mas caracteres (actualmente usas 2 caracteres)
+2  |Documento           | 1017e              | Solo digitos, entre 6 a 10 caracte..          |haz coincidir formato, solo digitos, entre 6 a 10 caracteres
+3  |numero celular      |2174926526          | Solo se admiten 10 numeros y empieza con el 3 |haz coincidir formato, solo se admiten 10 numeros y empieza con el 3
+4  |cantidad bicicletas |0                   | El valor debe ser igual o mayor a 1           |El valor debe ser mayor de o igual a 1
+5  |cantidad bicicletas |7                   | El valor debe ser igual o menor a 6           |El valor debe ser menor de o igual a 6
+6  |Aceptar derechos    |no marcar casilla   | Marca esta casilla si deseas continuar        |Controla esta casilla si deseas continuar
+7  |Planes              |no seleccionar nada | Seleccionar cualquier opcion                  |Seleccionar alguna de las opciones para continuar
+8  |correo              |no colocar@         |Error, falta el signo @ en tu direccion        |incluye un signo @ en la direccion("correo copiado"). la direccion  
+                                                                                              copiada (correo copiado) no tiene el @
