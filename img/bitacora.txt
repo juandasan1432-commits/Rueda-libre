@@ -177,6 +177,8 @@ Cambios respecto a la propuesta del cliente
   Se mantiene, pero solo con texto Azul Noche: con texto blanco o como
   texto sobre crema no cumple el contraste mínimo.
 
+  link de la pagina en github pages:  https://juandasan1432-commits.github.io/Rueda-libre/
+
 
 
 
