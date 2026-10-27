@@ -180,7 +180,13 @@ Cambios respecto a la propuesta del cliente
   link de la pagina en github pages:  https://juandasan1432-commits.github.io/Rueda-libre/
 
 
-COMPROBACIÓN DE HERENCIA (DevTools) - Elemento revisado: párrafo de "¿Quiénes somos?" en index. - Propiedad que si se hereda: font-family. En Computed el párrafo muestra Open Sans, que viene de la regla del body (Styles: "Inherited from body"). - Propiedad que no se hereda: background-color. En Computed el párrafo no muestra nada.
+COMPROBACIÓN DE HERENCIA (DevTools)
+- Elemento revisado: párrafo de "¿Quiénes somos?" en index.
+- Propiedad que si se hereda: font-family. En Computed el párrafo muestra
+  Open Sans, que viene de la regla del body (Styles: "Inherited from body").
+- Propiedad que no se hereda: background-color. En Computed el párrafo
+  muestra rgba(0, 0, 0, 0), es decir, transparente. Se ve crema porque deja
+  ver el fondo del body que está detrás.
 
 
 
