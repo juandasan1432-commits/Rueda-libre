@@ -167,7 +167,7 @@ Resumen por uso
 - Texto principal y títulos: Azul Noche.
 - Texto secundario: Gris Asfalto.
 - Enlaces: Verde Ruta, subrayados.
-- Botón principal: fondo Verde Ruta con texto blanco.
+- Botón principal: fondo Verde Ruta con texto blanco. 
 - Botón secundario y destacados: fondo Naranja Pedal con texto Azul Noche
   y borde Azul Noche.
 - Encabezado del sitio: fondo Azul Noche con texto blanco.
@@ -188,5 +188,18 @@ COMPROBACIÓN DE HERENCIA (DevTools)
   muestra rgba(0, 0, 0, 0), es decir, transparente. Se ve crema porque deja
   ver el fondo del body que está detrás.
 
+MINIRETO 10 - CONFLICTO DE ESPECIFICIDAD
 
+Problema: el enlace de la página actual tiene la clase "activo".
+Se ve en el color del #menu a, pero no se pone verde.
+
+En DevTools (Styles), el color de .activo aparece tachado.
+Se aplica el color de #menu a.
+
+Especificidad (ids, clases, etiquetas):
+- #menu a  → (1, 0, 1)
+- .activo  → (0, 1, 0)
+
+Causa: se compara el primer número. #menu a tiene 1 id y .activo
+tiene 0, así que gana #menu a.
 

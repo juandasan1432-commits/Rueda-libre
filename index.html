@@ -8,11 +8,10 @@
         content="Rueda Libre: tu negocio de bicicletas, accesorios y servicios para disfrutar cada recorrido.">
     <title>Rueda Libre</title>
     <link rel="icon" type="image/jpeg" href="img/imagen_ruleta.jpeg">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-      
 </head>
 
 <body>
@@ -20,25 +19,26 @@
     <header>
         <h1>Rueda Libre</h1>
 
-        <nav aria-label="Navegacion Principal">
-            <a href="index.html">Inicio</a>
-            <a href="paginas/Tarifas.html">Tarifas y Rutas</a>
-            <a href="paginas/Reservas.html">Reservas</a>
+        <nav aria-label="Navegación principal">
+            <ul id="menu">
+                <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
+                <li><a href="paginas/Tarifas.html">Tarifas y Rutas</a></li>
+                <li><a href="paginas/Reservas.html">Reservas</a></li>
+            </ul>
         </nav>
     </header>
 
- <main>
-    <p>
-        ¡Bienvenido a Rueda Libre! 🚴‍♂️🌿 Somos el lugar ideal para los amantes
-        de las bicicletas y la aventura. Queremos acompañarte en cada recorrido,
-        ofreciéndote calidad, libertad y pasión por el ciclismo. Ya sea que
-        recorras la ciudad o explores nuevos caminos, ¡prepárate para vivir
-        nuevas experiencias sobre dos ruedas con nosotros!
-    </p>
+    <main>
+        <p>
+            ¡Bienvenido a Rueda Libre! 🚴‍♂️🌿 Somos el lugar ideal para los amantes
+            de las bicicletas y la aventura. Queremos acompañarte en cada recorrido,
+            ofreciéndote calidad, libertad y pasión por el ciclismo. Ya sea que
+            recorras la ciudad o explores nuevos caminos, ¡prepárate para vivir
+            nuevas experiencias sobre dos ruedas con nosotros!
+        </p>
 
-    <img src="img/Imagen_portada.jpg" alt="Grupo de seis ciclistas con bicicletas de montaña en la cima de un sendero, con montañas verdes al fondo"">
+        <img src="img/Imagen_portada.jpg" alt="Grupo de seis ciclistas con bicicletas de montaña en la cima de un sendero, con montañas verdes al fondo">
 
-   
         <section>
             <h2>¿Quiénes somos?</h2>
 
@@ -52,7 +52,6 @@
                 recorridos guiados y servicios básicos de mantenimiento, procurando que cada persona tenga una
                 experiencia agradable y segura.
             </p>
-
         </section>
 
         <section>
@@ -62,20 +61,18 @@
                 <h3>Alquiler de bicicletas</h3>
 
                 <p>
-                    Explora la ciudad a tu propio ritmo! Ofrecemos un servicio de alquiler de bicicletas para que
+                    ¡Explora la ciudad a tu propio ritmo! Ofrecemos un servicio de alquiler de bicicletas para que
                     disfrutes de paseos, recorridos turísticos y aventuras al aire libre. <strong>Contamos con
                         diferentes opciones para adaptarnos a tus necesidades, ya sea que quieras dar un paseo tranquilo
                         o recorrer mayores distancias. Nuestro objetivo es que disfrutes de una experiencia cómoda,
-                        práctica y divertida sobre dos ruedas.</strong>.
+                        práctica y divertida sobre dos ruedas.</strong>
                 </p>
 
-                <img src="img/Imagen_Tipo_Bicicletas.png" alt="Representacion de algunas bicicletas que se tienen disponibles">
+                <img src="img/Imagen_Tipo_Bicicletas.png" alt="Representación de algunas bicicletas que se tienen disponibles">
             </article>
 
             <article>
-                <h3>
-                Recorridos guiados
-                </h3>
+                <h3>Recorridos guiados</h3>
 
                 <p>
                     Descubre Medellín de una manera diferente con nuestros recorridos guiados en bicicleta. Explora sus
@@ -83,8 +80,10 @@
                     <br><em>conoce lugares emblemáticos y disfruta de sus paisajes mientras compartes una experiencia
                         única con otros amantes del ciclismo</em>.
                 </p>
+
                 <img src="img/Ruta_img.jpg" alt="Recorrido en bicicleta con amigos">
-                <p><a href="paginas/Tarifas.html">Ver rutas y precios de los recorridos guiados</a></p>
+
+                <p><a href="paginas/Tarifas.html#Section-recorridos">Ver rutas y precios de los recorridos guiados</a></p>
             </article>
 
             <article>
@@ -93,66 +92,64 @@
                 <p>
                     <strong>Mantenemos tu bicicleta en las mejores condiciones para que disfrutes cada recorrido con
                         tranquilidad.</strong> En nuestro taller básico ofrecemos servicios de mantenimiento preventivo,
-                    revisión de frenos, ajuste de cambios, calibración de llantas y lubricación de la chain. Nos
+                    revisión de frenos, ajuste de cambios, calibración de llantas y lubricación de la cadena. Nos
                     preocupamos por el buen funcionamiento de tu bicicleta y por ayudarte a disfrutar de cada aventura
                     con mayor seguridad.
                 </p>
-
             </article>
         </section>
 
         <section>
-
             <h2>¿Cómo alquilar?</h2>
 
             <ol>
-                <li>Paso Estar registrado y tener una cuenta en nuestra web.</li>
-                <li>Paso Elegir la bicicleta que deseas alquilar y la fecha de alquiler.</li>
-                <li>Paso Pagar el alquiler y recibir la confirmación de tu reserva.</li>
-                <li>Paso Acercarte a nuestro local en la fecha y hora acordadas para recoger tu bicicleta.</li>
+                <li>Estar registrado y tener una cuenta en nuestra web.</li>
+                <li>Elegir la bicicleta que deseas alquilar y la fecha de alquiler.</li>
+                <li>Pagar el alquiler y recibir la confirmación de tu reserva.</li>
+                <li>Acercarte a nuestro local en la fecha y hora acordadas para recoger tu bicicleta.</li>
             </ol>
 
-        <section>
-            <h3>Beneficios de alquilar con nosotros</h3>
+            <section>
+                <h3>Beneficios de alquilar con nosotros</h3>
 
-            <ul>
-                <li>Variedad de bicicletas para todos los gustos y necesidades.</li>
-                <li>Precios competitivos y promociones especiales.</li>
-                <li>Asesoramiento personalizado para elegir la bicicleta adecuada.</li>
-            </ul>
+                <ul>
+                    <li>Variedad de bicicletas para todos los gustos y necesidades.</li>
+                    <li>Precios competitivos y promociones especiales.</li>
+                    <li>Asesoramiento personalizado para elegir la bicicleta adecuada.</li>
+                </ul>
+            </section>
 
-             </section>
+            <p><a href="paginas/Reservas.html" class="boton-reservar">Reservar ahora</a></p>
         </section>
-
-        <p><a href="paginas/Reservas.html">Reservar ahora</a></p>
 
         <section id="section-encuentranos">
             <h2>Encuéntranos</h2>
-            
+
             <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Odit eos numquam facer! Iusto illum facilis laborum,
+                Odit eos numquam facere! Iusto illum facilis laborum,
                 aliquid vel rerum ut!
             </p>
 
-           <p><a href="https://maps.app.goo.gl/1jxdFAxvmZHS9Qur9" target="_blank" rel="noopener noreferrer">
-                Como llegar a Rueda Libre con google maps
-            </a></p>
+            <address>
+                <ul>
+                    <li>
+                        <a href="https://maps.app.goo.gl/1jxdFAxvmZHS9Qur9" target="_blank" rel="noopener noreferrer">Cómo llegar a Rueda Libre con Google Maps (se abre en otra pestaña)</a>
+                    </li>
+                    <li>
+                        <a href="mailto:hola@ruedalibre.example">Escríbenos a hola@ruedalibre.example</a>
+                    </li>
+                </ul>
+            </address>
         </section>
-
-       <p>
-         <a href="mailto:hola@ruedalibre.example"> Correo electronico</a>
-        </p> 
-
     </main>
+
     <footer>
         <p>Rueda Libre</p>
-        <p>
-            Correo:
-            <a href="mailto:hola@ruedalibre.example"> hola@ruedalibre.example</a>
-        </p>
+        <address>
+            Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+        </address>
         <small>&copy; 2026 Rueda Libre</small>
- 
     </footer>
 
 </body>

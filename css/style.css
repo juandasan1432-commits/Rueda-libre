@@ -4,6 +4,7 @@
     --gris-asfalto: #5B6470;
     --azul-noche: #14213D;
     --crema: #FAF6EF;
+    --blanco: #FFFFFF;
 
     /*tipografia*/
     --fuentes-titulos: Montserrat, arial, sans-serif;
@@ -16,7 +17,7 @@
 }
 
 body{
-    font-family: var(--fuentes-titulos);
+    font-family: var(--fuente-textos);
     color: var(--azul-noche);
     background-color: var(--crema)
 }
@@ -31,4 +32,50 @@ img{
 }
 caption{
     text-align: center;
+}
+
+#menu a { color: var(--gris-asfalto); text-decoration: none; }
+
+#menu .activo { color: var(--gris-asfalto); font-weight: 600; }
+
+#menu a:hover{
+    color: var(--verde-ruta);
+}
+
+#menu a:focus{
+    color: var(--azul-noche);
+    outline: 2px solid var(--azul-noche);
+    outline-offset: 2px;
+}
+
+.boton-reservar{
+    display: inline-block;
+    background-color: var(--verde-ruta);
+    color: var(--blanco);   
+    padding: var(--espacio-s) var(--espacio-m);
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+}   
+button{
+    display: inline-block;
+    background-color: var(--verde-ruta);
+    color: var(--blanco);
+    padding: var(--espacio-s) var(--espacio-m);
+    margin-top: 0.5 ;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+.boton-reservar:hover, button:hover{
+    background-color: var(--azul-noche);
+}
+.boton-reservar:focus, button:focus{
+    outline: 3px solid var(--azul-noche);
+    outline-offset: 2px;
+}
+
+input:focus,textarea:focus,select:focus{
+    outline: 3px solid var(--azul-noche);
+    outline-offset: 2px;
 }
