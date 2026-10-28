@@ -203,3 +203,8 @@ Especificidad (ids, clases, etiquetas):
 Causa: se compara el primer número. #menu a tiene 1 id y .activo
 tiene 0, así que gana #menu a.
 
+ main con max-width: 60rem para dar espacio a tablas y tarjetas sin que el
+  contenido ocupe toda la pantalla en monitores grandes.
+- p con max-width: 40rem para que las líneas de texto queden entre 45 y 75
+  caracteres, que es lo recomendado para leer cómodo.
+

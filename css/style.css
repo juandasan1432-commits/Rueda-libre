@@ -15,6 +15,12 @@
     --espacio-m: 1rem;
     --espacio-1: 2rem;
 }
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
 
 body{
     font-family: var(--fuente-textos);
@@ -26,7 +32,7 @@ h1,h2,h3,h4,h5,h6{
 
 }
 img{
-    max-width: 30%;
+    max-width: 100%;
     height: auto;
 
 }
@@ -62,7 +68,7 @@ button{
     background-color: var(--verde-ruta);
     color: var(--blanco);
     padding: var(--espacio-s) var(--espacio-m);
-    margin-top: 0.5 ;
+    margin-top: 0.5rem ;
     border-radius: 2rem;
     text-decoration: none;
     font-weight: 600;
@@ -78,4 +84,81 @@ button{
 input:focus,textarea:focus,select:focus{
     outline: 3px solid var(--azul-noche);
     outline-offset: 2px;
+}
+
+main{
+    max-width: 55rem;
+    margin: 0 auto;
+}
+
+.pagina{
+    min-height: 60vh;
+}
+
+.tarjeta{
+    flex: 1 1 15rem;
+    padding: var(--espacio-s);
+    border: 1px solid var(--gris-asfalto);
+    border-radius: 1rem;
+    margin-bottom: var(--espacio-1);
+    
+}
+.tarjeta img{
+width: 100%;
+height: 14rem;
+object-fit: cover;
+}
+
+.tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-m);
+}
+
+table{
+    width: 100%;
+    border-collapse:separate;
+    margin-bottom: var(--espacio-1);
+}
+
+th,td{
+    padding: var(--espacio-s) var(--espacio-m);
+    border: 1px solid var(--gris-asfalto);
+    text-align: left;
+}
+
+thead th{
+    background-color: var(--azul-noche);
+    color: var(--blanco);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea{
+    width: 100%;
+}
+fieldset{
+    margin-bottom: var(--espacio-1);
+    padding: var(--espacio-m);
+    border: 1px solid var(--gris-asfalto);
+    border-radius: 0.5rem;
+}
+
+form .boton{
+    padding: var(--espacio-m) var(--espacio-m);
+}
+
+#menu li{
+    display: inline-block;
+    margin-right: var(--espacio-m);
+}
+
+#menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
