@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
@@ -28,11 +28,11 @@
     </header>
 
     <main>
-
         <p>
             Correo de atención al cliente:
             <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
         </p>
+        
 
         <section aria-labelledby="titulo-formulario">
             <h2 id="titulo-formulario">Formulario de reservas</h2>
@@ -70,7 +70,7 @@
 
                     <p>
                         <label for="Fecha">Fecha del alquiler</label>
-                        <input type="date" id="Fecha" name="Fecha" min="2026-11-01" max="2026-12-01" required>
+                        <input type="date" id="Fecha" name="Fecha" min="2026-11-01" max="2026-12-31" required>
                     </p>
 
                     <fieldset>
@@ -165,11 +165,19 @@
     </main>
 
     <footer>
+        <div class="footer-contenido">
         <p>Rueda Libre</p>
         <address>
             Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
         </address>
+
         <small>&copy; 2026 Rueda Libre</small>
+        </div>
+
+        <a href="https://wa.me/573000000000" class="boton boton-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (se abre en otra pestaña)">
+            <img src="../img/whatsapp.svg" alt="" class="icono">
+            WhatsApp
+        </a>
     </footer>
 
 </body>

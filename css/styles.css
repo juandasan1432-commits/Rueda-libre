@@ -1,0 +1,315 @@
+/* =========================================================
+   1. VARIABLES
+   ========================================================= */
+:root {
+    /* Colores de la marca */
+    --verde-ruta: #1E7A4F;
+    --naranja-pedal: #F39A2B;
+    --azul-noche: #14213D;
+    --crema: #FAF6EF;
+    --gris-asfalto: #5B6470;
+    --blanco: #FFFFFF;
+
+    /* Tipografía */
+    --fuente-titulos: Montserrat, Arial, sans-serif;
+    --fuente-textos: "Open Sans", Arial, sans-serif;
+
+    /* Escala de espaciado */
+    --espacio-s: 0.5rem;
+    --espacio-m: 1rem;
+    --espacio-l: 2rem;
+
+    /* Esquinas redondeadas */
+    --radio-s: 0.5rem;
+    --radio-m: 1rem;
+    --radio-l: 2rem;
+}
+
+
+/* =========================================================
+   2. BASE
+   ========================================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fuente-textos);
+    color: var(--azul-noche);
+    background-color: var(--crema);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fuente-titulos);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+
+/* =========================================================
+   3. ESTRUCTURA (encabezado y contenido principal)
+   ========================================================= */
+header,
+main {
+    max-width: 55rem;
+    margin: 0 auto;
+    padding: 0 var(--espacio-m);
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--espacio-m);
+}
+
+.portada {
+    min-height: 60vh;
+}
+
+
+/* =========================================================
+   4. NAVEGACIÓN
+   ========================================================= */
+#menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    display: inline-block;
+    margin-right: var(--espacio-m);
+}
+
+#menu a {
+    color: var(--azul-noche);
+    text-decoration: none;
+}
+
+/* #menu .activo (1,1,0) le gana a #menu a (1,0,1) */
+#menu .activo {
+    color: var(--verde-ruta);
+    font-weight: 600;
+}
+
+#menu a:hover {
+    color: var(--verde-ruta);
+}
+
+#menu a:focus {
+    outline: 2px solid var(--azul-noche);
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   5. COMPONENTES
+   ========================================================= */
+
+/* --- Botón (enlaces de acción y botón del formulario) --- */
+.boton {
+    display: inline-block;
+    background-color: var(--verde-ruta);
+    color: var(--blanco);
+    padding: var(--espacio-s) var(--espacio-m);
+    border: 2px solid transparent;
+    border-radius: var(--radio-l);
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: var(--azul-noche);
+}
+
+.boton:focus {
+    outline: 3px solid var(--azul-noche);
+    outline-offset: 2px;
+}
+
+/* Variante: botón centrado dentro de una tarjeta */
+.boton-centrado {
+    display: block;
+    max-width: 80%;
+    margin: var(--espacio-m) auto 0;
+    text-align: center;
+}
+
+/* --- Tarjetas de servicios --- */
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-m);
+}
+
+.tarjeta {
+    flex: 1 1 15rem;
+    padding: var(--espacio-s);
+    border: 1px solid var(--gris-asfalto);
+    border-radius: var(--radio-m);
+    margin-bottom: var(--espacio-l);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+}
+
+/* --- Tarjeta destacada (bicicletas eléctricas) --- */
+.tarjeta-destacada {
+    position: relative;
+    padding: var(--espacio-m);
+    border: 3px solid var(--gris-asfalto);
+    border-radius: var(--radio-l);
+}
+
+.tarjeta-destacada-contenido {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-l);
+}
+
+.tarjeta-destacada-contenido img {
+    width: 50%;
+    border-radius: var(--radio-m);
+}
+
+.tarjeta-texto {
+    flex: 1;
+}
+
+/* --- Etiqueta "Nuevo" --- */
+.etiqueta-nuevo {
+    position: absolute;
+    top: var(--espacio-m);
+    right: var(--espacio-m);
+    background-color: var(--azul-noche);
+    color: var(--blanco);
+    border: 2px solid var(--gris-asfalto);
+    border-radius: var(--radio-m);
+    padding: 0.25rem 0.75rem;
+    font-weight: 600;
+}
+
+/* --- Botón flotante de WhatsApp --- */
+.boton-whatsapp {
+    position: fixed;
+    bottom: var(--espacio-m);
+    right: var(--espacio-m);
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--espacio-s);
+}
+
+.icono {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+
+/* =========================================================
+   6. TABLAS
+   ========================================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--espacio-l);
+}
+
+caption {
+    text-align: center;
+}
+
+th,
+td {
+    padding: var(--espacio-s) var(--espacio-m);
+    border: 1px solid var(--gris-asfalto);
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--azul-noche);
+    color: var(--blanco);
+}
+
+
+/* =========================================================
+   7. FORMULARIO
+   ========================================================= */
+fieldset {
+    margin-bottom: var(--espacio-l);
+    padding: var(--espacio-m);
+    border: 1px solid var(--gris-asfalto);
+    border-radius: var(--radio-s);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: var(--espacio-s);
+    border: 1px solid var(--gris-asfalto);
+    border-radius: 0.25rem;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--azul-noche);
+    outline-offset: 2px;
+}
+
+form .boton {
+    padding: var(--espacio-m) var(--espacio-l);
+}
+
+
+/* =========================================================
+   8. PIE DE PÁGINA
+   ========================================================= */
+footer {
+    background-color: var(--azul-noche);
+    color: var(--blanco);
+    /* 5rem abajo: espacio para que el botón de WhatsApp no tape el contenido */
+    padding: var(--espacio-l) var(--espacio-m) 5rem;
+}
+
+.footer-contenido {
+    max-width: 55rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--espacio-m);
+}
+
+footer a {
+    color: var(--blanco);
+}

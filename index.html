@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -80,15 +80,14 @@
 
                 <p>
                     Descubre Medellín de una manera diferente con nuestros recorridos guiados en bicicleta. Explora sus
-                    calles,
-                    <br><em>conoce lugares emblemáticos y disfruta de sus paisajes mientras compartes una experiencia
+                    calles, <em>conoce lugares emblemáticos y disfruta de sus paisajes mientras compartes una experiencia
                         única con otros amantes del ciclismo</em>.
                     </p>
-                    <p><a href="paginas/Tarifas.html#Section-recorridos">Ver rutas y precios de los recorridos guiados</a></p>
+                    <p><a class="boton boton-centrado" href="paginas/Tarifas.html#Section-recorridos">Ver rutas y precios de los recorridos guiados</a></p>
             </article>
 
             <article class="tarjeta">
-                <img src="img/Imagen_taller_basico.png" alt="representativa de taller y mecanica basic para las bicicletas">
+                <img src="img/Imagen_taller_basico.png" alt="Bicicleta azul en un soporte de taller, junto a herramientas de mecánica">
                 <h3>Taller básico</h3>
 
                 <p>
@@ -100,7 +99,25 @@
                 </p>
             </article>
             </div>
+
+            <div class="tarjeta-destacada">
+                <article class="tarjeta-destacada-contenido">
+                    <span class="etiqueta-nuevo">Nuevo</span>
+
+                    <img src="img/imagen_bicicletas_electricas.png" alt="Bicicleta eléctrica con vista a Medellín y el texto: Bicicletas Eléctricas, más lejos con menos esfuerzo">
+
+                    <div class="tarjeta-texto">
+                    <h3>Bicicletas eléctricas</h3>
+                    <p>Descubre una nueva forma de recorrer Medellín con nuestras bicicletas eléctricas. Combina la libertad de pedalear con la asistencia de un motor eléctrico que te ayuda a recorrer mayores distancias y afrontar las subidas con menos esfuerzo.</p>
+                    <p>Explora la ciudad, disfruta de sus paisajes y vive nuevas experiencias a tu propio ritmo. Ya sea para recorrer sus calles, visitar lugares turísticos o disfrutar de una aventura al aire libre, las bicicletas eléctricas son una alternativa cómoda, práctica y sostenible.</p>
+                    <p>¡Anímate a probar una nueva forma de moverte! Elige tu bicicleta eléctrica y prepárate para descubrir Medellín sobre dos ruedas.</p>
+                   </div>
+
+                </article>
+            </div>
         </section>
+
+
 
 
         <section>
@@ -123,7 +140,7 @@
                 </ul>
             </section>
 
-            <p><a href="paginas/Reservas.html" class="boton-reservar">Reservar ahora</a></p>
+            <p><a href="paginas/Reservas.html" class="boton">Reservar ahora</a></p>
         </section>
 
         <section id="section-encuentranos">
@@ -149,11 +166,19 @@
     </main>
 
     <footer>
+        <div class="footer-contenido">
         <p>Rueda Libre</p>
         <address>
             Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
         </address>
+
         <small>&copy; 2026 Rueda Libre</small>
+        </div>
+
+        <a href="https://wa.me/573000000000" class="boton boton-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (se abre en otra pestaña)">
+            <img src="img/whatsapp.svg" alt="" class="icono">
+            WhatsApp
+        </a>
     </footer>
 
 </body>
