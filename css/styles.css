@@ -77,12 +77,30 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: var(--espacio-m);
+    background-color: #1e315a;
+    color: #FFFFFF;
 }
 
 .portada {
     min-height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: var(--espacio-l);
+    gap: var(--espacio-l);
 }
 
+.portada img{
+    display: flex;
+    height: 86%;
+    border-radius: var(--espacio-s);
+    align-items: center;
+}
+
+.img-tarifas{
+     max-width: 100%;
+     height: auto;
+     margin-top: var(--espacio-m);
+}
 
 /* =========================================================
    4. NAVEGACIÓN
@@ -91,22 +109,23 @@ header {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    gap: var(--espacio-m);
+    flex-wrap: wrap;
+
 }
 
-#menu li {
-    display: inline-block;
-    margin-right: var(--espacio-m);
-}
 
 #menu a {
-    color: var(--azul-noche);
+    color: var(--blanco);
     text-decoration: none;
+    font-weight: 900;
 }
 
 /* #menu .activo (1,1,0) le gana a #menu a (1,0,1) */
 #menu .activo {
     color: var(--verde-ruta);
-    font-weight: 600;
+    font-weight: 300;
 }
 
 #menu a:hover {
@@ -150,8 +169,10 @@ header {
 .boton-centrado {
     display: block;
     max-width: 80%;
-    margin: var(--espacio-m) auto 0;
+    margin-top: 3rem;
+    margin: var(--espacio-l) auto 0;
     text-align: center;
+    padding: var(--espacio-s);
 }
 
 /* --- Tarjetas de servicios --- */
@@ -164,8 +185,8 @@ header {
 .tarjeta {
     flex: 1 1 15rem;
     padding: var(--espacio-s);
-    border: 1px solid var(--gris-asfalto);
-    border-radius: var(--radio-m);
+    border: 3px solid var(--gris-asfalto);
+    border-radius: var(--radio-l);
     margin-bottom: var(--espacio-l);
 }
 
@@ -173,7 +194,13 @@ header {
     width: 100%;
     height: 14rem;
     object-fit: cover;
+    border-radius: var(--radio-s);
 }
+ 
+.tarjetan{
+    flex: 1;
+}
+
 
 /* --- Tarjeta destacada (bicicletas eléctricas) --- */
 .tarjeta-destacada {
@@ -198,12 +225,45 @@ header {
     flex: 1;
 }
 
+/*Tajetas agregadas flotas*/
+
+.flota{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr)) ;
+    gap: var(--espacio-m);
+}
+
+.tarjeta3{
+   display: flex;
+   flex-direction: column;
+   padding: var(--espacio-s);
+   border: 3px solid var(--gris-asfalto);
+   border-radius: var(--radio-m);
+   gap: 17px;
+
+}
+.tarjeta3 img{
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: var(--espacio-s);
+}
+
+.boton3{
+    align-self: flex-start;
+    margin: auto auto var(--espacio-s);
+}
+
+.tarjeta3 h3, .tarjeta3 p{
+    margin: 0;
+}
+
 /* --- Etiqueta "Nuevo" --- */
 .etiqueta-nuevo {
     position: absolute;
     top: var(--espacio-m);
     right: var(--espacio-m);
-    background-color: var(--azul-noche);
+    background-color: var(--verde-ruta);
     color: var(--blanco);
     border: 2px solid var(--gris-asfalto);
     border-radius: var(--radio-m);
@@ -257,7 +317,8 @@ thead th {
 /* =========================================================
    7. FORMULARIO
    ========================================================= */
-fieldset {
+
+   fieldset {
     margin-bottom: var(--espacio-l);
     padding: var(--espacio-m);
     border: 1px solid var(--gris-asfalto);
@@ -282,11 +343,24 @@ input:focus,
 select:focus,
 textarea:focus {
     outline: 3px solid var(--azul-noche);
-    outline-offset: 2px;
+    outline-offset: 1px;
 }
 
 form .boton {
     padding: var(--espacio-m) var(--espacio-l);
+}
+
+.formulario-campos{
+    display: flex;
+    gap: var(--espacio-m);
+}
+
+.campos{
+    flex: 1;
+}
+
+.campos-separados{
+    margin-bottom: var(--espacio-m);
 }
 
 
@@ -312,4 +386,19 @@ footer {
 
 footer a {
     color: var(--blanco);
+}
+
+.footer-bloque{
+    flex: 1 1 12rem;
+}
+
+footer h2{
+    font-size: 1.125rem;
+    margin-top: 0;
+}
+footer dl,dd{
+    margin: 0;
+}
+footer dd{
+    margin-bottom: var(--espacio-mgx);
 }

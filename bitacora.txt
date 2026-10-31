@@ -208,3 +208,14 @@ tiene 0, así que gana #menu a.
 - p con max-width: 40rem para que las líneas de texto queden entre 45 y 75
   caracteres, que es lo recomendado para leer cómodo.
 
+ COLUMNAS DE LA FLOTA SEGÚN EL ANCHO (modo dispositivo de DevTools)
+
+- 1280 px: 3 columnas
+- 900 px:  3 columnas
+- 500 px:  1 columnas
+
+Observación: a 1280 y a 900 px se ve la misma cantidad de columnas porque
+el <main> tiene un ancho máximo de 55rem, así que la flota tiene el mismo
+espacio en los dos casos. La cuadrícula se adapta al espacio de su
+contenedor, no directamente al ancho de la pantalla. A 500 px solo cabe
+una columna, porque cada tarjeta necesita mínimo 15rem.

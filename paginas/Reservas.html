@@ -41,76 +41,76 @@
 
                 <fieldset>
                     <legend>Tus datos</legend>
-
-                    <p>
+                    
+                        <div class="campos-separados">
                         <label for="nombre">Nombre</label>
                         <input type="text" id="nombre" name="nombre" minlength="3" required>
-                    </p>
+                        </div>
 
-                    <p>
+                    <div class="formulario-campos">
+                     <div class="campos">
                         <label for="Documento">Número de documento</label>
                         <input type="text" id="Documento" name="Numero_Documento" inputmode="numeric"
                             pattern="[0-9]{6,10}" title="Solo dígitos, entre 6 y 10 caracteres" required>
-                    </p>
+                            </div>
 
-                    <p>
-                        <label for="Correo">Correo electrónico</label>
-                        <input type="email" id="Correo" name="Correo" required>
-                    </p>
-
-                    <p>
+                            <div class="campos">
                         <label for="Celular">Número de celular</label>
                         <input type="tel" id="Celular" name="Celular" pattern="3[0-9]{9}"
-                            title="Solo se admiten 10 números y debe comenzar con el 3" required>
-                    </p>
-                </fieldset>
+                        title="Solo se admiten 10 números y debe comenzar con el 3" required>
+                            </div>
+                    </div>
+                        <div class="campos-separados">
+                        <label for="Correo">Correo electrónico</label>
+                        <input type="email" id="Correo" name="Correo" required>
+                        </div>
+                
+                    </fieldset>
 
                 <fieldset>
                     <legend>Tu alquiler</legend>
-
-                    <p>
+                    <div class="campos-separados">
                         <label for="Fecha">Fecha del alquiler</label>
                         <input type="date" id="Fecha" name="Fecha" min="2026-11-01" max="2026-12-31" required>
-                    </p>
+                    </div>
 
                     <fieldset>
                         <legend>Tipo de bicicleta</legend>
-                        <p>
+                        
                             <input type="radio" id="Montaña" name="Tipo_bicicleta" value="Bicleta Montaña" required>
                             <label for="Montaña">Bicicleta de montaña</label>
-                        </p>
-                        <p>
+                        
+                        
                             <input type="radio" id="Urbana" name="Tipo_bicicleta" value="Bicicleta Urbana">
                             <label for="Urbana">Bicicleta urbana</label>
-                        </p>
-                        <p>
+                        
+                        
                             <input type="radio" id="Electrica" name="Tipo_bicicleta" value="Bicicleta Electrica">
                             <label for="Electrica">Bicicleta eléctrica</label>
-                        </p>
+                        
                     </fieldset>
 
                     <fieldset>
                         <legend>Plan</legend>
-                        <p>
+                        
                             <input type="radio" id="1_hora" name="Tipo_plan" value="1 hora" required>
                             <label for="1_hora">1 hora</label>
-                        </p>
-                        <p>
+                        
+                        
                             <input type="radio" id="medio_dia" name="Tipo_plan" value="medio dia">
                             <label for="medio_dia">Medio día</label>
-                        </p>
-                        <p>
+                        
+                        
                             <input type="radio" id="dia_completo" name="Tipo_plan" value="dia completa">
                             <label for="dia_completo">Día completo</label>
-                        </p>
+                        
                     </fieldset>
-
-                    <p>
+                    <div class="campos-separados">
+                        
                         <label for="Cantidad_bicicletas">Cantidad de bicicletas</label>
                         <input type="number" id="Cantidad_bicicletas" name="Cantidad_bicicletas" min="1" max="6" value="1" required>
-                    </p>
-
-                    <p>
+                    </div>
+                    <div class="campos-separados">
                         <label for="recorrido">Recorrido guiado</label>
                         <select id="recorrido" name="recorrido">
                             <option value="ninguno">Ninguno</option>
@@ -118,21 +118,20 @@
                             <option value="Sabores_barrio">Sabores del Barrio</option>
                             <option value="Reto_palmas">Reto de las Palmas</option>
                         </select>
-                    </p>
+                    </div>
+                    
                 </fieldset>
 
                 <fieldset>
                     <legend>Confirmación</legend>
 
-                    <p>
+                    
                         <label for="Comentarios">Comentarios de reserva</label>
                         <textarea id="Comentarios" name="Comentarios_reserva" rows="4" maxlength="300"></textarea>
-                    </p>
-
-                    <p>
+                    
                         <input type="checkbox" id="Derechos_alquiler" name="Derechos_alquiler" value="Acuerdo_Derechos_alquiler" required>
                         <label for="Derechos_alquiler">Acepto los derechos de alquiler</label>
-                    </p>
+                    
                 </fieldset>
 
                 <button type="submit" class="boton">Enviar reserva</button>
