@@ -15,6 +15,7 @@
     --fuente-textos: "Open Sans", Arial, sans-serif;
 
     /* Escala de espaciado */
+    --espaciado-xs: 0.25rem;
     --espacio-s: 0.5rem;
     --espacio-m: 1rem;
     --espacio-l: 2rem;
@@ -64,43 +65,41 @@ address {
 /* =========================================================
    3. ESTRUCTURA (encabezado y contenido principal)
    ========================================================= */
-header,
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--espacio-m);
+    padding: var(--espacio-m);
+    background-color: var(--azul-noche);
+    color: var(--blanco);
+}
+
 main {
     max-width: 55rem;
     margin: 0 auto;
     padding: 0 var(--espacio-m);
 }
 
-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--espacio-m);
-    background-color: #1e315a;
-    color: #FFFFFF;
-}
-
 .portada {
-    min-height: 60vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: var(--espacio-l);
     gap: var(--espacio-l);
-}
-
-.portada img{
-    display: flex;
-    height: 86%;
-    border-radius: var(--espacio-s);
     align-items: center;
+    margin-top: var(--espacio-l);
 }
 
-.img-tarifas{
-     max-width: 100%;
-     height: auto;
-     margin-top: var(--espacio-m);
+.portada img {
+    width: 100%;
+    max-height: 26rem;
+    object-fit: cover;
+    border-radius: var(--radio-s);
 }
+
+.img-tarifas {
+    margin-top: var(--espacio-m);
+}
+
 
 /* =========================================================
    4. NAVEGACIÓN
@@ -110,30 +109,28 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: var(--espacio-m);
     flex-wrap: wrap;
-
+    justify-content: center;
+    gap: var(--espacio-m);
 }
-
 
 #menu a {
     color: var(--blanco);
     text-decoration: none;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 /* #menu .activo (1,1,0) le gana a #menu a (1,0,1) */
 #menu .activo {
-    color: var(--verde-ruta);
-    font-weight: 300;
+    color: var(--naranja-pedal);
 }
 
 #menu a:hover {
-    color: var(--verde-ruta);
+    color: var(--naranja-pedal);
 }
 
 #menu a:focus {
-    outline: 2px solid var(--azul-noche);
+    outline: 2px solid var(--naranja-pedal);
     outline-offset: 2px;
 }
 
@@ -147,8 +144,8 @@ header {
     display: inline-block;
     background-color: var(--verde-ruta);
     color: var(--blanco);
-    padding: var(--espacio-s) var(--espacio-m);
-    border: 2px solid transparent;
+    padding: var(--espacio-s);
+    border: 2px solid var(--gris-asfalto);
     border-radius: var(--radio-l);
     font: inherit;
     font-weight: 600;
@@ -161,21 +158,19 @@ header {
 }
 
 .boton:focus {
-    outline: 3px solid var(--azul-noche);
-    outline-offset: 2px;
+    outline: 2px solid var(--azul-noche); /*Grosor de la cuadricula de los botones al nevagar con shift*/
+    outline-offset: 2px; /*espacio entre el borde con el boton o contenido*/
 }
 
 /* Variante: botón centrado dentro de una tarjeta */
 .boton-centrado {
     display: block;
     max-width: 80%;
-    margin-top: 3rem;
     margin: var(--espacio-l) auto 0;
     text-align: center;
-    padding: var(--espacio-s);
 }
 
-/* --- Tarjetas de servicios --- */
+/* --- Tarjetas de servicios y rutas --- */
 .tarjetas {
     display: flex;
     flex-wrap: wrap;
@@ -196,11 +191,6 @@ header {
     object-fit: cover;
     border-radius: var(--radio-s);
 }
- 
-.tarjetan{
-    flex: 1;
-}
-
 
 /* --- Tarjeta destacada (bicicletas eléctricas) --- */
 .tarjeta-destacada {
@@ -212,12 +202,11 @@ header {
 
 .tarjeta-destacada-contenido {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: var(--espacio-l);
 }
 
 .tarjeta-destacada-contenido img {
-    width: 50%;
     border-radius: var(--radio-m);
 }
 
@@ -225,37 +214,37 @@ header {
     flex: 1;
 }
 
-/*Tajetas agregadas flotas*/
-
-.flota{
+/* --- Flota (se adapta sola con auto-fill, sin media query) --- */
+.flota {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr)) ;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     gap: var(--espacio-m);
 }
 
-.tarjeta3{
-   display: flex;
-   flex-direction: column;
-   padding: var(--espacio-s);
-   border: 3px solid var(--gris-asfalto);
-   border-radius: var(--radio-m);
-   gap: 17px;
-
+.tarjeta3 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-m);
+    padding: var(--espacio-s);
+    border: 2px solid var(--gris-asfalto);
+    border-radius: var(--radio-m);
 }
-.tarjeta3 img{
+
+.tarjeta3 img {
     width: 100%;
     height: 14rem;
     object-fit: cover;
-    border-radius: var(--espacio-s);
+    border-radius: var(--radio-s);
 }
 
-.boton3{
+.tarjeta3 h3,
+.tarjeta3 p {
+    margin: 0;
+}
+
+.boton3 {
     align-self: flex-start;
     margin: auto auto var(--espacio-s);
-}
-
-.tarjeta3 h3, .tarjeta3 p{
-    margin: 0;
 }
 
 /* --- Etiqueta "Nuevo" --- */
@@ -291,10 +280,14 @@ header {
 /* =========================================================
    6. TABLAS
    ========================================================= */
+
+/* La tabla se desliza dentro de su caja; la página nunca tiene scroll lateral */
+
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: var(--espacio-l);
+    font-size: 0.865rem;
 }
 
 caption {
@@ -303,7 +296,7 @@ caption {
 
 th,
 td {
-    padding: var(--espacio-s) var(--espacio-m);
+    padding: var(--espaciado-xs);
     border: 1px solid var(--gris-asfalto);
     text-align: left;
 }
@@ -317,8 +310,7 @@ thead th {
 /* =========================================================
    7. FORMULARIO
    ========================================================= */
-
-   fieldset {
+fieldset {
     margin-bottom: var(--espacio-l);
     padding: var(--espacio-m);
     border: 1px solid var(--gris-asfalto);
@@ -342,7 +334,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-    outline: 3px solid var(--azul-noche);
+    outline: 2px solid var(--azul-noche);
     outline-offset: 1px;
 }
 
@@ -350,16 +342,19 @@ form .boton {
     padding: var(--espacio-m) var(--espacio-l);
 }
 
-.formulario-campos{
+.formulario-campos {
     display: flex;
+    flex-direction: column;
     gap: var(--espacio-m);
+    margin-bottom: var(--espacio-m);
 }
 
-.campos{
+/* En columna no hace nada; en fila (tablet) cada campo toma la mitad */
+.campos {
     flex: 1;
 }
 
-.campos-separados{
+.campos-separados {
     margin-bottom: var(--espacio-m);
 }
 
@@ -370,7 +365,6 @@ form .boton {
 footer {
     background-color: var(--azul-noche);
     color: var(--blanco);
-    /* 5rem abajo: espacio para que el botón de WhatsApp no tape el contenido */
     padding: var(--espacio-l) var(--espacio-m) 5rem;
 }
 
@@ -380,25 +374,72 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--espacio-m);
+}
+
+
+.footer-bloque {
+    flex: 1 1 12rem;
 }
 
 footer a {
     color: var(--blanco);
 }
 
-.footer-bloque{
-    flex: 1 1 12rem;
-}
-
-footer h2{
+footer h2 {
     font-size: 1.125rem;
     margin-top: 0;
 }
-footer dl,dd{
+
+footer dl,
+footer dd {
     margin: 0;
 }
-footer dd{
-    margin-bottom: var(--espacio-mgx);
+
+footer dd {
+    margin-bottom: var(--espacio-m);
 }
+
+
+/* =========================================================
+   9. TABLET: desde 768 px
+   La base de arriba es la versión de celular.
+   Aquí solo va lo que cambia cuando hay más espacio.
+   ========================================================= */
+@media (min-width: 768px) {
+
+    /* Portada: texto y foto lado a lado */
+    .portada {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Servicios y rutas: siempre tres en fila, del mismo ancho */
+    .tarjeta {
+        flex: 1;
+    }
+
+    /* Tarjeta eléctrica: imagen y texto lado a lado */
+    .tarjeta-destacada-contenido {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .tarjeta-destacada-contenido img {
+        width: 50%;
+    }
+
+    /* Documento y celular en la misma fila */
+    .formulario-campos {
+        flex-direction: row;
+    }
+    .table{
+        font-size: 1rem;
+    }
+    .td,th{
+        padding: var(--espacio-s);
+    }
+}
+
+/* Sin media query de escritorio: el max-width de main (55rem)
+   ya limita y centra el contenido en pantallas grandes. */

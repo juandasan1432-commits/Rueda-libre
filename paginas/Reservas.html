@@ -76,34 +76,40 @@
 
                     <fieldset>
                         <legend>Tipo de bicicleta</legend>
-                        
+                        <div>
                             <input type="radio" id="Montaña" name="Tipo_bicicleta" value="Bicleta Montaña" required>
                             <label for="Montaña">Bicicleta de montaña</label>
+                        </div>
                         
-                        
+                        <div>
                             <input type="radio" id="Urbana" name="Tipo_bicicleta" value="Bicicleta Urbana">
                             <label for="Urbana">Bicicleta urbana</label>
+                        </div>
                         
-                        
+                        <div>
                             <input type="radio" id="Electrica" name="Tipo_bicicleta" value="Bicicleta Electrica">
                             <label for="Electrica">Bicicleta eléctrica</label>
+                        </div>
                         
                     </fieldset>
 
                     <fieldset>
                         <legend>Plan</legend>
-                        
+                        <div>
                             <input type="radio" id="1_hora" name="Tipo_plan" value="1 hora" required>
                             <label for="1_hora">1 hora</label>
+                        </div>
                         
-                        
+                        <div>
                             <input type="radio" id="medio_dia" name="Tipo_plan" value="medio dia">
                             <label for="medio_dia">Medio día</label>
-                        
-                        
+                        </div>
+
+                        <div>
                             <input type="radio" id="dia_completo" name="Tipo_plan" value="dia completa">
                             <label for="dia_completo">Día completo</label>
-                        
+                        </div>
+
                     </fieldset>
                     <div class="campos-separados">
                         
@@ -124,14 +130,16 @@
 
                 <fieldset>
                     <legend>Confirmación</legend>
-
-                    
+                    <div>
                         <label for="Comentarios">Comentarios de reserva</label>
                         <textarea id="Comentarios" name="Comentarios_reserva" rows="4" maxlength="300"></textarea>
-                    
+                    </div>
+
+                    <div>
                         <input type="checkbox" id="Derechos_alquiler" name="Derechos_alquiler" value="Acuerdo_Derechos_alquiler" required>
                         <label for="Derechos_alquiler">Acepto los derechos de alquiler</label>
-                    
+                    </div>
+
                 </fieldset>
 
                 <button type="submit" class="boton">Enviar reserva</button>
@@ -164,19 +172,37 @@
     </main>
 
     <footer>
-        <div class="footer-contenido">
-        <p>Rueda Libre</p>
-        <address>
-            Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
-        </address>
 
-        <small>&copy; 2026 Rueda Libre</small>
+        <div class="footer-contenido">
+
+            <div class="footer-bloque">
+                <h2>Rueda libre</h2>
+                <address>
+                    Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+                </address>
+            </div>
+
+            <div class="footer-bloque">
+                <h2>Contacto</h2>
+                <small>&copy; 2026 Rueda Libre</small>
+            </div>
+
+            <div class="footer-bloque">
+                <h2>horarios</h2>
+                <dl>
+                    <dt>Lunes a viernes</dt>
+                    <dd>7:00 a. m. - 7:00 p. m.</dd>
+                    <dt>Sábados, domingos y festivos</dt>
+                    <dd>6:00 a. m. - 2:00 p. m.</dd>
+                </dl>
+            </div>
         </div>
 
-        <a href="https://wa.me/573000000000" class="boton boton-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (se abre en otra pestaña)">
-            <img src="../img/whatsapp.svg" alt="" class="icono">
-            WhatsApp
-        </a>
+            <a href="https://wa.me/573000000000" class="boton boton-whatsapp" target="_blank" rel="noopener noreferrer"
+                aria-label="WhatsApp (se abre en otra pestaña)">
+                <img src="../img/whatsapp.svg" alt="" class="icono">
+                WhatsApp
+            </a>
     </footer>
 
 </body>
