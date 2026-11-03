@@ -264,7 +264,7 @@ main {
 .boton-whatsapp {
     position: fixed;
     bottom: var(--espacio-s);
-    right: var(--espacio-m);
+    right: var(--espacio-s);
     z-index: 10;
     display: inline-flex;
     align-items: center;
@@ -276,6 +276,9 @@ main {
     height: 1.5rem;
 }
 
+.texto-whatsApp{
+    display: none;
+}
 
 /* =========================================================
    6. TABLAS
@@ -438,6 +441,9 @@ footer dd {
     }
     .td,th{
         padding: var(--espacio-s);
+    }
+    .texto-whatsApp{
+        display: inline;
     }
 }
 
