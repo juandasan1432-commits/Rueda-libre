@@ -219,3 +219,30 @@ el <main> tiene un ancho máximo de 55rem, así que la flota tiene el mismo
 espacio en los dos casos. La cuadrícula se adapta al espacio de su
 contenedor, no directamente al ancho de la pantalla. A 500 px solo cabe
 una columna, porque cada tarjeta necesita mínimo 15rem.
+
+Boton de rueda nocturnua: lo cree con tailwind con los siguentes atributos, inline-block, px-2 py-2, border-2, border-grey-400, rounded-md, hover: bg-grey-400, bg-grey-800, text-gray-300 y font-bold
+
+diferencia entre un framework de componentes y uno utility first.
+
+Componentes (bootstrap)
+son elementos ya creados completamente que podemos reutilizar para hacer una pagina web.
+
+utility first (tailwind): son clases qu eme brindan funciones especificas para crear algo mas grande como un boton, por ejemplo me brinda clases de colores,padding,display, etc.
+
+Clase que uso: bg-slate-950
+En output.css aparece con su CSS: background-color: rgb(2 6 23 / var(--tw-bg-opacity, 1));
+
+Clase que no uso: bg-pink-500
+No aparece en output.css.
+
+Experimento
+Agregué bg-pink-500 a un elemento de index.html y guardé. Con la CLI en modo --watch,
+output.css se regeneró y la clase apareció. Al quitarla y guardar de nuevo, desapareció.
+
+Busqueda en output.css
+Por qué ocurre
+Tailwind no genera todas sus clases posibles. En tailwind.config.js, la opción "content"
+le indica qué archivos leer (en mi caso ./index.html). La CLI escanea esos archivos,
+detecta las clases que realmente uso y genera CSS solo para esas. Las que no encuentra,
+como bg-pink-500, no se generan.
+Gracias a esto, output.css solo contiene lo necesario y pesa unos pocos KB
