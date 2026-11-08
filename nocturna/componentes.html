@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rueda nocturna · Componentes</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class="bg-slate-950 text-slate-100">
+    <header>
+        <div class="max-w-2xl mx-auto text-center px-6 pt-10">
+            <h1 class="text-4xl font-bold">Kit de componentes</h1>
+        </div>
+    </header>
+    <main>
+        <section class="px-6 py-10">
+            <div class="max-w-2xl mx-auto space-y-6">
+                <h2 class="text-2xl font-bold">Botones</h2>
+
+                <div class="flex flex-wrap gap-4">
+                    <button type="button"
+                        class="rounded-lg border-2 border-transparent bg-green-600 px-6 py-3 font-semibold text-slate-950 shadow-lg shadow-green-600/30 transition hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-slate-950">
+                        Principal
+                    </button>
+
+                    <button type="button"
+                        class="rounded-lg border-2 border-transparent bg-slate-700 px-6 py-3 font-semibold text-slate-100 shadow-lg shadow-black/40 transition hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-300 focus:ring-offset-2 focus:ring-offset-slate-950">
+                        Secundario
+                    </button>
+
+                    <button type="button"
+                        class="rounded-lg border-2 border-green-600 bg-transparent px-6 py-3 font-semibold text-green-500 transition hover:bg-green-600 hover:text-slate-950 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-slate-950">
+                        Contorno
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-10">
+            <div class="max-w-2xl mx-auto space-y-6">
+                <h2 class="text-2xl font-bold">Tarjetas</h2>
+                <article
+                    class="space-y-4 rounded-lg border-2 border-slate-600 bg-slate-800 p-4 shadow-lg shadow-black/40 transition hover:border-green-500 hover:shadow-xl hover:shadow-green-500/20">
+
+                    <img class="w-full h-60 rounded-md object-cover" src="./img/luces_del_centro.png"
+                        alt=" referencia de ruta con luces, edificios de fondo, personas en bici y el metro de medellin">
+
+                    <div class="space-y-4">
+                        <div class="space-y-2">
+                            <p class="inline-block rounded-md bg-green-500/10 px-2 py-1 text-sm font-semibold text-green-300">Nivel: facil</p>
+                            <h3 class="text-2xl font-bold">Luces del centro</h3>
+                        </div>
+
+                        <!--Listas de datos-->
+                        <dl class="flex flex-wrap gap-x-8 gap-y-4">
+                            <div>
+                                <dt class="text-sm text-slate-300 uppercase tracking-wider">Distancia:</dt>
+                                <dd class="text-lg font-semibold">10 kilometros</dd>
+                            </div>
+                            <div>
+                                <dt class="text-sm text-slate-300 uppercase tracking-wider">Duracion:</dt>
+                                <dd class="text-lg font-semibold">2 horas</dd>
+                            </div>
+                            <div>
+                                <dt class="text-sm text-slate-300 uppercase tracking-wider">Punto de encuentro:</dt>
+                                <dd class="text-lg font-semibold">Rueda Libre</dd>
+                            </div>
+                        </dl>
+
+                        <div class="flex flex-wrap gap-4 items-center justify-between border-t border-slate-600 pt-4">
+                            <!-- precio y boton -->
+                            <p class="text-xl font-bold">Precio: $55.000</p>
+                            <a href="#inscripcion"
+                                class="inline-block rounded-lg border-2 border-transparent bg-green-600 px-6 py-3 font-semibold text-slate-950 shadow-lg shadow-green-600/30 transition hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-slate-800">Inscríbete</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="px-6 py-10">
+            <div class="max-w-2xl mx-auto space-y-6">
+                <h2 class="text-2xl font-bold">Alertas</h2>
+
+                <div class="space-y-4">
+                    <div class="space-y-1 rounded-lg border-l-4 border-sky-500 bg-sky-500/10 p-4">
+                        <p class="text-lg font-semibold text-sky-300">Horarios de salida</p>
+                        <p class="text-sm text-slate-300">Todas las rutas salen a las 7:00 p. m. desde la sede de Rueda Libre.</p>
+                    </div>
+                    <div class="space-y-1 rounded-lg border-l-4 border-green-500 bg-green-500/10 p-4" role="status">
+                        <p class="text-lg font-semibold text-green-300">Inscripcion confirmada</p>
+                        <p class="text-sm text-slate-300">Te enviamos los detalles de tu ruta al correo.</p>
+                    </div>
+                    <div class="space-y-1 rounded-lg border-l-4 border-amber-500 bg-amber-500/10 p-4">
+                        <p class="text-lg font-semibold text-amber-300">Cupos limitados</p>
+                        <p class="text-sm text-slate-300">Quedan pocos cupos para este jueves. Inscríbete pronto</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-6 py-10">
+            <div class="max-w-2xl mx-auto space-y-6">
+                <h2 class="text-2xl font-bold">Campos formulario</h2>
+                <div class="space-y-6">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium" for="correo">Introduce tu correo</label>
+                        <input class="block w-full rounded-lg border border-slate-600 bg-slate-900 px-4 py-3 placeholder:text-slate-500 transition focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-slate-950" type="email" id="correo" name="correo" placeholder="tucorreo@.com" autocomplete="email" aria-describedby="correo-ayuda" required>
+                        <p class="text-sm text-slate-400" id="correo-ayuda">Te enviaremos la confirmación a este correo.</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium" for="celular">Introduce tu numero celular</label>
+                        <input class="block w-full rounded-lg border border-slate-600 bg-slate-900 px-4 py-3 placeholder:text-slate-500 transition focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-slate-950" type="tel" id="celular" name="celular" placeholder="3174926530" autocomplete="tel" aria-describedby="celular-ayuda" required>
+                        <p class="text-sm text-slate-400" id="celular-ayuda">Solo para avisos el día de la ruta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

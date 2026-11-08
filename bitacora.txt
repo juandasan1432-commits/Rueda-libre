@@ -246,3 +246,71 @@ le indica qué archivos leer (en mi caso ./index.html). La CLI escanea esos arch
 detecta las clases que realmente uso y genera CSS solo para esas. Las que no encuentra,
 como bg-pink-500, no se generan.
 Gracias a esto, output.css solo contiene lo necesario y pesa unos pocos KB
+
+=== Rueda Nocturna · Kit de componentes ===
+
+Página de componentes
+Creé nocturna/componentes.html con los cuatro tipos de componente del kit:
+- Botones: principal, secundario y contorno.
+- Card de ruta.
+- Alertas: información, éxito y advertencia.
+- Campos de formulario: correo y celular.
+
+Reglas del kit
+
+1. Radios
+- Componentes y controles (botones, inputs, alertas, card): rounded-lg.
+- Elementos dentro de un componente con padding (imagen de la card, etiqueta
+  de nivel): rounded-md. El radio interno es menor que el externo para que las
+  esquinas anidadas se vean parejas.
+
+2. Escala de espaciado (solo estos valores)
+- 1: entre título y texto de una alerta.
+- 2: elementos muy unidos (label + input + ayuda, etiqueta de nivel + título).
+- 3: alto de los controles (py-3 en botones e inputs).
+- 4: padding de alertas y card, separación entre botones, entre alertas y entre
+  bloques de la card, padding horizontal de inputs.
+- 6: separación entre el h2 y su contenido, entre campos, padding horizontal
+  de secciones y botones.
+- 10: padding vertical de las secciones.
+- Excepción: el hero de index.html usa py-20 porque es la portada de la campaña
+  y necesita más espacio.
+
+3. Colores
+- Fondo de la página: slate-950 (en el body, lo heredan todas las secciones).
+- Fondo de la card: slate-800.
+- Fondo de los inputs: slate-900.
+- Bordes neutros: slate-600.
+- Texto principal: slate-100.
+- Texto secundario (dt, texto de alertas, introducciones): slate-300.
+- Texto de ayuda de los campos: slate-400.
+- Acento: green-600 (relleno del botón principal), green-500 (hover).
+- Estados (alertas y etiquetas de nivel): borde -500, fondo -500/10, texto -300.
+  Información: sky. Éxito y nivel fácil: green. Advertencia y nivel medio: amber.
+  Nivel difícil: red.
+
+4. Bordes
+- Card: [border / border-2] slate-600. En hover solo cambia el color a green-500;
+  el grosor no cambia, por eso el contenido no se mueve.
+- Inputs: [border / border-2] slate-600.
+- Alertas: border-l-4 con el color de su estado.
+- Botones: border-2 en los tres (transparente en principal y secundario, verde en
+  contorno) para que midan lo mismo.
+
+5. Sombras
+- Botón principal: shadow-lg shadow-green-600/30.
+- Botón secundario y card: shadow-lg shadow-black/40.
+- Card en hover: shadow-xl shadow-green-500/20.
+
+6. Foco (todos los elementos interactivos)
+- focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2
+- focus:ring-offset-* siempre igual al fondo que hay detrás del elemento:
+  slate-950 en las secciones y slate-800 dentro de la card. Si no coincide,
+  aparece un recuadro de otro color entre el elemento y el anillo.
+- El botón secundario usa ring-slate-300 en vez del verde, para no usar el
+  acento en una acción secundaria.
+
+7. Tipografía
+- h1: text-4xl font-bold (componentes) / text-5xl font-extrabold (hero).
+- h2: text-2xl font-bold en todas las secciones.
+- h3: text-2xl font-bold.
