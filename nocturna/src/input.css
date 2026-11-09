@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -7,5 +8,25 @@
 @layer base {
     h1, h2, h3 {
         @apply font-montserrat;
+    }
+}
+
+@layer components {
+    .btn-inscripcion {
+        @apply rounded-lg border-2 border-transparent bg-verde-ruta px-6 py-3 font-semibold text-crema shadow-lg shadow-verde-ruta/30 transition;
+    }
+
+    .btn-inscripcion:hover {
+        @apply bg-verde-ruta/90;
+    }
+
+    .btn-inscripcion:focus {
+        @apply outline-none ring-2 ring-verde-ruta ring-offset-2 ring-offset-crema;
+    }
+
+     @media (prefers-color-scheme: dark) {
+        .btn-inscripcion:focus {
+            @apply ring-amarillo-farol ring-offset-azul-noche;
+        }
     }
 }

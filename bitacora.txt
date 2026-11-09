@@ -314,3 +314,51 @@ Reglas del kit
 - h1: text-4xl font-bold (componentes) / text-5xl font-extrabold (hero).
 - h2: text-2xl font-bold en todas las secciones.
 - h3: text-2xl font-bold.
+
+RETO - REUTILIZACIÓN DE CLASES
+
+Elementos repetidos en index.html:
+
+- Botones "Inscríbete": 6 apariciones.
+- Tarjetas de rutas: 3 apariciones.
+- Campos del formulario: 2 apariciones.
+- Etiquetas del formulario: 2 apariciones.
+
+Reutilización con @apply
+
+Creé una clase llamada .btn-inscripcion dentro de @layer components en input.css.
+
+La utilicé en los botones "Inscríbete" para no repetir las mismas clases en cada uno.
+
+Las tarjetas y los campos del formulario se dejaron con sus clases de Tailwind.
+
+Orden de las clases
+
+Organicé las clases siguiendo este orden:
+
+1. Layout: distribución y alineación.
+2. Espaciado: padding, margin y gap.
+3. Tipografía: tamaño, familia y grosor.
+4. Color: fondo, texto y bordes.
+5. Estados: hover, focus, dark y sombras.
+
+CSS minificado
+
+Comando utilizado:
+
+npm run build
+
+Medición de output.css:
+
+Tamaño en bytes: 14.141.
+Tamaño en KB: 14.1KB.
+
+Configuración
+
+Se mantuvo Tailwind CSS 3, los colores y las tipografías del proyecto.
+
+No se utilizó @theme porque corresponde a Tailwind 4.
+
+Conclusión
+
+Con @apply evito repetir las clases de los botones y puedo modificar su apariencia desde un solo lugar. El resto de elementos conserva las utilidades de Tailwind.

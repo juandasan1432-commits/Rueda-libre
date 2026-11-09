@@ -1,24 +1,27 @@
+
 {
-  "name": "nocturna",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/juandasan1432-commits/Rueda-libre.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/juandasan1432-commits/Rueda-libre/issues"
-  },
-  "homepage": "https://github.com/juandasan1432-commits/Rueda-libre#readme",
-  "devDependencies": {
-    "tailwindcss": "^3.4.17"
-  }
+    "name": "nocturna",
+    "version": "1.0.0",
+    "description": "Campaña Rueda Nocturna de Rueda Libre",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tailwindcss -i ./src/input.css -o ./src/output.css --minify",
+        "watch": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/juandasan1432-commits/Rueda-libre.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/juandasan1432-commits/Rueda-libre/issues"
+    },
+    "homepage": "https://github.com/juandasan1432-commits/Rueda-libre#readme",
+    "devDependencies": {
+        "tailwindcss": "^3.4.17"
+    }
 }
