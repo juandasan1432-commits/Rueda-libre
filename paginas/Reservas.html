@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,119 +6,268 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Reserva tu bicicleta en Rueda Libre y consulta nuestro horario de atención">
+
     <title>Reserva tu Bicicleta | Rueda Libre</title>
+
     <link rel="icon" type="image/jpeg" href="../img/imagen_ruleta.jpeg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
 
+    <!-- ENCABEZADO -->
     <header>
         <h1>Reserva tu Bicicleta</h1>
 
         <nav aria-label="Navegación principal">
             <ul id="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="Tarifas.html">Tarifas y Rutas</a></li>
-                <li><a href="Reservas.html" class="activo" aria-current="page">Reservas</a></li>
+
+                <li>
+                    <a href="../index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Tarifas.html">
+                        Tarifas y Rutas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Reservas.html" class="activo" aria-current="page">
+                        Reservas
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../nocturna/index.html">
+                        Rueda Nocturna
+                    </a>
+                </li>
+
             </ul>
         </nav>
     </header>
 
     <main>
+
         <p>
             Correo de atención al cliente:
-            <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+            <a href="mailto:hola@ruedalibre.example">
+                hola@ruedalibre.example
+            </a>
         </p>
-        
 
+        <!-- FORMULARIO DE RESERVAS -->
         <section aria-labelledby="titulo-formulario">
-            <h2 id="titulo-formulario">Formulario de reservas</h2>
+
+            <h2 id="titulo-formulario">
+                Formulario de reservas
+            </h2>
 
             <form method="post">
 
+                <!-- DATOS PERSONALES -->
                 <fieldset>
-                    <legend>Tus datos</legend>
-                    
-                        <div class="campos-separados">
+                    <legend>Datos Personales</legend>
+
+                    <div class="campos-separados">
                         <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" minlength="3" required>
-                        </div>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            minlength="3"
+                            required>
+                    </div>
 
                     <div class="formulario-campos">
-                     <div class="campos">
-                        <label for="Documento">Número de documento</label>
-                        <input type="text" id="Documento" name="Numero_Documento" inputmode="numeric"
-                            pattern="[0-9]{6,10}" title="Solo dígitos, entre 6 y 10 caracteres" required>
-                            </div>
 
-                            <div class="campos">
-                        <label for="Celular">Número de celular</label>
-                        <input type="tel" id="Celular" name="Celular" pattern="3[0-9]{9}"
-                        title="Solo se admiten 10 números y debe comenzar con el 3" required>
-                            </div>
-                    </div>
-                        <div class="campos-separados">
-                        <label for="Correo">Correo electrónico</label>
-                        <input type="email" id="Correo" name="Correo" required>
+                        <!-- DOCUMENTO -->
+                        <div class="campos">
+                            <label for="Documento">
+                                Número de documento
+                            </label>
+
+                            <input
+                                type="text"
+                                id="Documento"
+                                name="Numero_Documento"
+                                inputmode="numeric"
+                                pattern="[0-9]{6,10}"
+                                title="Solo dígitos, entre 6 y 10 caracteres"
+                                required>
                         </div>
-                
-                    </fieldset>
 
+                        <!-- CELULAR -->
+                        <div class="campos">
+                            <label for="Celular">
+                                Número de celular
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="Celular"
+                                name="Celular"
+                                pattern="3[0-9]{9}"
+                                title="Solo se admiten 10 números y debe comenzar con el 3"
+                                required>
+                        </div>
+
+                    </div>
+
+                    <!-- CORREO -->
+                    <div class="campos-separados">
+                        <label for="Correo">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="Correo"
+                            name="Correo"
+                            required>
+                    </div>
+
+                </fieldset>
+
+                <!-- DATOS DEL ALQUILER -->
                 <fieldset>
                     <legend>Tu alquiler</legend>
+
+                    <!-- FECHA -->
                     <div class="campos-separados">
-                        <label for="Fecha">Fecha del alquiler</label>
-                        <input type="date" id="Fecha" name="Fecha" min="2026-11-01" max="2026-12-31" required>
+                        <label for="Fecha">
+                            Fecha del alquiler
+                        </label>
+
+                        <input
+                            type="date"
+                            id="Fecha"
+                            name="Fecha"
+                            min="2026-11-01"
+                            max="2026-12-31"
+                            required>
                     </div>
 
+                    <!-- TIPO DE BICICLETA -->
                     <fieldset>
                         <legend>Tipo de bicicleta</legend>
+
                         <div>
-                            <input type="radio" id="Montaña" name="Tipo_bicicleta" value="Bicleta Montaña" required>
-                            <label for="Montaña">Bicicleta de montaña</label>
+                            <input
+                                type="radio"
+                                id="Montaña"
+                                name="Tipo_bicicleta"
+                                value="Bicicleta Montaña"
+                                required>
+
+                            <label for="Montaña">
+                                Bicicleta de montaña
+                            </label>
                         </div>
-                        
+
                         <div>
-                            <input type="radio" id="Urbana" name="Tipo_bicicleta" value="Bicicleta Urbana">
-                            <label for="Urbana">Bicicleta urbana</label>
+                            <input
+                                type="radio"
+                                id="Urbana"
+                                name="Tipo_bicicleta"
+                                value="Bicicleta Urbana">
+
+                            <label for="Urbana">
+                                Bicicleta urbana
+                            </label>
                         </div>
-                        
+
                         <div>
-                            <input type="radio" id="Electrica" name="Tipo_bicicleta" value="Bicicleta Electrica">
-                            <label for="Electrica">Bicicleta eléctrica</label>
+                            <input
+                                type="radio"
+                                id="Electrica"
+                                name="Tipo_bicicleta"
+                                value="Bicicleta Electrica">
+
+                            <label for="Electrica">
+                                Bicicleta eléctrica
+                            </label>
                         </div>
 
                     </fieldset>
 
+                    <!-- PLAN -->
                     <fieldset>
                         <legend>Plan</legend>
+
                         <div>
-                            <input type="radio" id="1_hora" name="Tipo_plan" value="1 hora" required>
-                            <label for="1_hora">1 hora</label>
-                        </div>
-                        
-                        <div>
-                            <input type="radio" id="medio_dia" name="Tipo_plan" value="medio dia">
-                            <label for="medio_dia">Medio día</label>
+                            <input
+                                type="radio"
+                                id="1_hora"
+                                name="Tipo_plan"
+                                value="1 hora"
+                                required>
+
+                            <label for="1_hora">
+                                1 hora
+                            </label>
                         </div>
 
                         <div>
-                            <input type="radio" id="dia_completo" name="Tipo_plan" value="dia completa">
-                            <label for="dia_completo">Día completo</label>
+                            <input
+                                type="radio"
+                                id="medio_dia"
+                                name="Tipo_plan"
+                                value="medio dia">
+
+                            <label for="medio_dia">
+                                Medio día
+                            </label>
+                        </div>
+
+                        <div>
+                            <input
+                                type="radio"
+                                id="dia_completo"
+                                name="Tipo_plan"
+                                value="dia completo">
+
+                            <label for="dia_completo">
+                                Día completo
+                            </label>
                         </div>
 
                     </fieldset>
+
+                    <!-- CANTIDAD DE BICICLETAS -->
                     <div class="campos-separados">
-                        
-                        <label for="Cantidad_bicicletas">Cantidad de bicicletas</label>
-                        <input type="number" id="Cantidad_bicicletas" name="Cantidad_bicicletas" min="1" max="6" value="1" required>
+                        <label for="Cantidad_bicicletas">
+                            Cantidad de bicicletas
+                        </label>
+
+                        <input
+                            type="number"
+                            id="Cantidad_bicicletas"
+                            name="Cantidad_bicicletas"
+                            min="1"
+                            max="6"
+                            value="1"
+                            required>
                     </div>
+
+                    <!-- RECORRIDO GUIADO -->
                     <div class="campos-separados">
-                        <label for="recorrido">Recorrido guiado</label>
+                        <label for="recorrido">
+                            Recorrido guiado
+                        </label>
+
                         <select id="recorrido" name="recorrido">
                             <option value="ninguno">Ninguno</option>
                             <option value="Rio_parques">Río y Parques</option>
@@ -125,86 +275,146 @@
                             <option value="Reto_palmas">Reto de las Palmas</option>
                         </select>
                     </div>
-                    
+
                 </fieldset>
 
+                <!-- CONFIRMACIÓN -->
                 <fieldset>
                     <legend>Confirmación</legend>
+
+                    <!-- COMENTARIOS -->
                     <div>
-                        <label for="Comentarios">Comentarios de reserva</label>
-                        <textarea id="Comentarios" name="Comentarios_reserva" rows="4" maxlength="300"></textarea>
+                        <label for="Comentarios">
+                            Comentarios de reserva
+                        </label>
+
+                        <textarea
+                            id="Comentarios"
+                            name="Comentarios_reserva"
+                            rows="4"
+                            maxlength="300"></textarea>
                     </div>
 
+                    <!-- ACEPTACIÓN -->
                     <div>
-                        <input type="checkbox" id="Derechos_alquiler" name="Derechos_alquiler" value="Acuerdo_Derechos_alquiler" required>
-                        <label for="Derechos_alquiler">Acepto los derechos de alquiler</label>
+                        <input
+                            type="checkbox"
+                            id="Derechos_alquiler"
+                            name="Derechos_alquiler"
+                            value="Acuerdo_Derechos_alquiler"
+                            required>
+
+                        <label for="Derechos_alquiler">
+                            Acepto los derechos de alquiler
+                        </label>
                     </div>
 
                 </fieldset>
 
-                <button type="submit" class="boton">Enviar reserva</button>
+                <!-- BOTÓN -->
+                <button type="submit" class="boton">
+                    Enviar reserva
+                </button>
 
             </form>
+
         </section>
 
+        <!-- HORARIOS -->
         <aside aria-labelledby="titulo_horarios">
-            <h2 id="titulo_horarios">Horarios</h2>
+
+            <h2 id="titulo_horarios">
+                Horarios
+            </h2>
+
             <dl>
                 <dt>Lunes</dt>
                 <dd>7:00 a. m. - 7:00 p. m.</dd>
+
                 <dt>Martes</dt>
                 <dd>7:00 a. m. - 7:00 p. m.</dd>
+
                 <dt>Miércoles</dt>
                 <dd>7:00 a. m. - 7:00 p. m.</dd>
+
                 <dt>Jueves</dt>
                 <dd>7:00 a. m. - 7:00 p. m.</dd>
+
                 <dt>Viernes</dt>
                 <dd>7:00 a. m. - 7:00 p. m.</dd>
+
                 <dt>Sábado</dt>
                 <dd>6:00 a. m. - 2:00 p. m.</dd>
+
                 <dt>Domingo</dt>
                 <dd>6:00 a. m. - 2:00 p. m.</dd>
+
                 <dt>Festivos</dt>
                 <dd>6:00 a. m. - 2:00 p. m.</dd>
             </dl>
+
         </aside>
 
     </main>
 
+    <!-- PIE DE PÁGINA -->
     <footer>
 
         <div class="footer-contenido">
 
+            <!-- RUEDA LIBRE -->
             <div class="footer-bloque">
-                <h2>Rueda libre</h2>
+                <h2>Rueda Libre</h2>
+
                 <address>
-                    Correo: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+                    Correo:
+                    <a href="mailto:hola@ruedalibre.example">
+                        hola@ruedalibre.example
+                    </a>
                 </address>
             </div>
 
+            <!-- CONTACTO -->
             <div class="footer-bloque">
                 <h2>Contacto</h2>
+
                 <small>&copy; 2026 Rueda Libre</small>
             </div>
 
+            <!-- HORARIOS -->
             <div class="footer-bloque">
-                <h2>horarios</h2>
+                <h2>Horarios</h2>
+
                 <dl>
                     <dt>Lunes a viernes</dt>
                     <dd>7:00 a. m. - 7:00 p. m.</dd>
+
                     <dt>Sábados, domingos y festivos</dt>
                     <dd>6:00 a. m. - 2:00 p. m.</dd>
                 </dl>
             </div>
+
         </div>
 
-            <a href="https://wa.me/573000000000" class="boton boton-whatsapp" target="_blank" rel="noopener noreferrer"
-                aria-label="WhatsApp (se abre en otra pestaña)">
-                <img src="../img/whatsapp.svg" alt="" class="icono">
-                <span class="texto-whatsApp">WhatsApp</span>
-            </a>
+        <!-- WHATSAPP -->
+        <a
+            href="https://wa.me/573000000000"
+            class="boton boton-whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp (se abre en otra pestaña)">
+
+            <img
+                src="../img/whatsapp.svg"
+                alt=""
+                class="icono">
+
+            <span class="texto-whatsApp">
+                WhatsApp
+            </span>
+        </a>
+
     </footer>
 
 </body>
-
 </html>

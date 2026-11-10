@@ -362,3 +362,47 @@ No se utilizó @theme porque corresponde a Tailwind 4.
 Conclusión
 
 Con @apply evito repetir las clases de los botones y puedo modificar su apariencia desde un solo lugar. El resto de elementos conserva las utilidades de Tailwind.
+
+
+
+MINIRETO 9 - FORMULARIO DE INSCRIPCION
+
+Fecha: 09/11/2026
+
+Objetivo:
+Crear un formulario completo, semantico, accesible y validado
+para la campaña Rueda Nocturna.
+
+Cambios realizados:
+- Se completo el formulario de inscripcion.
+- Se agregaron todos los campos solicitados.
+- Se organizaron los datos con fieldset y legend.
+- Cada control tiene su label asociado.
+- Se agregaron validaciones HTML con required, minlength,
+  pattern, title, min y max.
+- Se aplico grid con dos columnas desde md.
+- Se conservaron los colores y el modo oscuro de Tailwind 3.
+- No se agrego JavaScript ni backend.
+
+Pruebas automatizadas:
+- Formulario vacio: correcto.
+- Datos invalidos: correcto.
+- Datos validos: correcto.
+- Navegacion con teclado: correcto.
+- Responsive en 360, 768 y 1280 px: correcto.
+- Modo claro y oscuro: correcto.
+- Resultado registrado: 52 de 52 verificaciones aprobadas.
+
+Tiempo:
+Inicio registrado: 16:25.
+Fin registrado: 16:28.
+Duracion de la edicion inicial: aproximadamente 3 minutos.
+El tiempo total del reto no se ha medido como una sesion continua.
+
+Pendiente:
+- Commit y push.
+- Comprobar el resultado en mi navegador local.
+
+Nota:
+El formulario utiliza validaciones nativas de HTML.
+No tiene backend para almacenar o recibir inscripciones.
