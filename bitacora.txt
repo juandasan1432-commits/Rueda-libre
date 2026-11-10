@@ -367,7 +367,6 @@ Con @apply evito repetir las clases de los botones y puedo modificar su aparienc
 
 MINIRETO 9 - FORMULARIO DE INSCRIPCION
 
-Fecha: 09/11/2026
 
 Objetivo:
 Crear un formulario completo, semantico, accesible y validado
@@ -399,10 +398,19 @@ Fin registrado: 16:28.
 Duracion de la edicion inicial: aproximadamente 3 minutos.
 El tiempo total del reto no se ha medido como una sesion continua.
 
-Pendiente:
-- Commit y push.
-- Comprobar el resultado en mi navegador local.
-
 Nota:
 El formulario utiliza validaciones nativas de HTML.
 No tiene backend para almacenar o recibir inscripciones.
+
+VALIDACION W3C
+
+Fecha: 09/11/2026
+
+Landing Rueda Nocturna:
+Validada con W3C - 0 errores.
+
+Pagina de Reservas:
+Validada con W3C - 0 errores.
+
+Resultado:
+Ambas paginas aprobaron la validacion HTML.
