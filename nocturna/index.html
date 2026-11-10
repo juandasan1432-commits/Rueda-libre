@@ -13,15 +13,14 @@
 
 <body class="bg-crema font-open-sans text-azul-noche dark:bg-azul-noche dark:text-crema">
 
-    <!-- ENCABEZADO -->
     <header class="border-b-2 border-verde-ruta/50 py-4 dark:border-crema/20">
 
         <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-6">
 
-            <!-- LOGO: ENLACE AL SITIO PRINCIPAL -->
+            <!-- ENLACE AL SITIO PRINCIPAL -->
             <a href="../index.html"
                 class="rounded-md font-montserrat text-xl font-extrabold focus:outline-none focus:ring-2 focus:ring-verde-ruta focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-amarillo-farol dark:focus:ring-offset-azul-noche">
-                Rueda Nocturna
+                Rueda libre
             </a>
 
             <div class="flex flex-wrap items-center gap-6">
@@ -37,6 +36,17 @@
                                 Rutas
                             </a>
                         </li>
+
+                        <li>
+
+                            <a href="#planes" class="rounded-md transition hover:text-verde-ruta focus:outline-none focus:ring-2 focus:ring-verde-ruta dark:hover:text-amarillo-farol dark:focus:ring-amarillo-farol">
+
+                                Planes
+
+                            </a>
+
+                        </li>
+
 
                         <li>
                             <a href="#como-funciona"
@@ -99,7 +109,7 @@
 
                         <ul class="flex flex-wrap gap-6 text-xl font-bold">
                             <li>3 rutas</li>
-                            <li>Desde $55.000</li>
+                            <li>Planes desde $45.000</li>
                         </ul>
 
                         <a href="#inscripcion" class="inline-block btn-inscripcion">
@@ -337,6 +347,67 @@
                             </div>
 
                         </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PLANES RUEDA NOCTURNA -->
+        <section id="planes" class="py-10">
+            <div class="mx-auto max-w-6xl space-y-6 px-6">
+                <div class="space-y-2">
+                    <h2 class="font-montserrat text-2xl font-bold">Planes Rueda Nocturna</h2>
+                    <p class="text-azul-noche/80 dark:text-crema/80">Elige el plan ideal para tu aventura nocturna.</p>
+                </div>
+                <div class="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-3">
+                    <!-- PLAN INDIVIDUAL -->
+                    <article class="flex h-full flex-col gap-6 rounded-lg border-2 border-verde-ruta/30 bg-white dark:border-crema/20 dark:bg-slate-900 dark:hover:border-amarillo-farol/50 hover:border-verde-ruta p-6 shadow-lg shadow-azul-noche/10 transition">
+                        <div class="space-y-2">
+                            <h3 class="font-montserrat text-2xl font-bold">Individual</h3>
+                            <p class="text-3xl font-extrabold">$55.000</p>
+                            <p class="text-sm text-azul-noche/80 dark:text-crema/80">Por persona</p>
+                        </div>
+                        <ul class="flex flex-1 flex-col gap-4">
+                            <li>Bicicleta y casco</li>
+                            <li>Luces LED y chaleco</li>
+                            <li>Guía certificado</li>
+                            <li>Hidratación</li>
+                        </ul>
+                        <a href="#inscripcion" class="block btn-inscripcion text-center">Elegir plan</a>
+                    </article>
+
+                    <!-- PLAN PAREJA -->
+                    <article class="flex h-full flex-col gap-6 rounded-lg border-4 border-amarillo-farol bg-amarillo-farol/10 dark:bg-slate-800 p-6 shadow-lg shadow-azul-noche/10 transition">
+                        <div class="space-y-2">
+                            <span class="inline-block rounded-full bg-amarillo-farol px-3 py-1 text-sm font-bold text-slate-950">Más elegido</span>
+                            <h3 class="font-montserrat text-2xl font-bold">Pareja</h3>
+                            <p class="text-3xl font-extrabold">$99.000</p>
+                            <p class="text-sm text-azul-noche/80 dark:text-crema/80">Las dos personas</p>
+                        </div>
+                        <ul class="flex flex-1 flex-col gap-4">
+                            <li>Todo lo del plan Individual</li>
+                            <li>Foto del recorrido</li>
+                            <li>Snack para dos</li>
+                            <li>Prioridad en la ruta</li>
+                        </ul>
+                        <a href="#inscripcion" class="block rounded-lg bg-amarillo-farol px-6 py-3 text-center font-semibold text-slate-950 transition hover:bg-amarillo-farol/80 focus:outline-none focus:ring-2 focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-offset-slate-800">Elegir plan</a>
+                    </article>
+
+                    <!-- PLAN GRUPO (4 A 8) -->
+                    <article class="flex h-full flex-col gap-6 rounded-lg border-2 border-verde-ruta/30 bg-white dark:border-crema/20 dark:bg-slate-900 dark:hover:border-amarillo-farol/50 hover:border-verde-ruta p-6 shadow-lg shadow-azul-noche/10 transition">
+                        <div class="space-y-2">
+                            <h3 class="font-montserrat text-2xl font-bold">Grupo (4 a 8)</h3>
+                            <p class="text-3xl font-extrabold">$45.000</p>
+                            <p class="text-sm text-azul-noche/80 dark:text-crema/80">Por persona</p>
+                        </div>
+                        <ul class="flex flex-1 flex-col gap-4">
+                            <li>Todo lo del plan Individual</li>
+                            <li>Guía exclusivo</li>
+                            <li>Horario a elección</li>
+                            <li>Fotos del grupo</li>
+                        </ul>
+                        <a href="#inscripcion" class="block btn-inscripcion text-center">Elegir plan</a>
                     </article>
 
                 </div>
@@ -717,6 +788,17 @@
                             Rutas
                         </a>
                     </li>
+
+                    <li>
+
+                        <a href="#planes" class="rounded-md transition hover:text-verde-ruta focus:outline-none focus:ring-2 focus:ring-verde-ruta dark:hover:text-amarillo-farol dark:focus:ring-amarillo-farol">
+
+                            Planes
+
+                        </a>
+
+                    </li>
+
 
                     <li>
                         <a href="#como-funciona"
